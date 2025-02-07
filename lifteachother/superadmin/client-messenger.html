@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Messenger</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../sidebar.css">
+    <link rel="stylesheet" href="client-messenger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+    <div class="sidebarcollapse-wrapper">
+        <aside>
+           <div>
+              <div class="mobile-adminhead d-md-none">
+                 <div class="adminlogo"><a href="javascript:void(0)" data-discover="true"><img src="../images/darklogo.svg" alt="Logo" class="admin-logo-img"></a></div>
+                 <div class="menu-icon">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+                    </svg>
+                 </div>
+              </div>
+              <div class="sidebar ">
+                 <div class="sidebarinner">
+                    <div class="adminlogo">
+                       <a href="javascript:void(0)" class="admin-logo-link" data-discover="true"><img src="../images/darklogo.svg" alt="Logo" class="admin-logo-img"></a>
+                       <div class="sidebarcollapse">
+                            <img src="../images/sidebarcoll.svg" alt="">
+                       </div>
+                    </div>
+                    <div class="flex-column nav">
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="dashboard.html" data-discover="true" title="Dashboard">
+                                <img src="../images/dashboard.svg" alt="">
+                                Dashboard
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="organization.html" data-discover="true" title="Organization">
+                                <img src="../images/organization.svg" alt="">
+                                Organization
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="package.html" data-discover="true" title="Package">
+                                <img src="../images/package.svg" alt="">
+                                Package
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="exercise-library.html" data-discover="true" title="Exercise Library">
+                                <img src="../images/exercise-library.svg" alt="">
+                                Exercise Library
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="sectiontitile.html" data-discover="true" title="Section Title">
+                                <img src="../images/section-tilte.svg" alt="">
+                                Section Title
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="sectionlibrary.html" data-discover="true" title="Section Library">
+                                <img src="../images/section-library.svg" alt="">
+                                Section Library
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="sessionlibrary.html" data-discover="true" title="Session Library">
+                                <img src="../images/session-library.svg" alt="">
+                                Session Library
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="session-planner.html" data-discover="true" title="Session Planner">
+                                <img src="../images/session-planner.svg" alt="">
+                                Session Planner
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="protocol.html" data-discover="true" title="Protocol">
+                                <img src="../images/protocol.svg" alt="">
+                                Protocol
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="profile.html" data-discover="true" title="Profile">
+                                <img src="../images/user-profile.svg" alt="">
+                                Profile
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link active" href="client.html" data-discover="true" title="Client">
+                                <img src="../images/client.svg" alt="">
+                                Client
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="coach.html" data-discover="true" title="Coach">
+                                <img src="../images/coach.svg" alt="">
+                                Coach
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="../login/login.html" data-discover="true" title="Logout">
+                                <img src="../images/logout.svg" alt="">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar-bottom">
+                       <p class="sidebar-subtext"><strong>LIFT EACH OTHER © 2020 - 2025</strong><br>91 High Street, Orpington, BR6 0LF</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </aside>
+        <main class="admin-wrap">
+           <div class="mainhead-wrap">
+                <div class="icon headitem">
+                    <img src="../images/client.svg" alt="">
+                </div>
+                <div class="headtitle headitem">
+                    <h2>Client Messenger</h2>
+                </div>
+                <div class="headitem groupbtn-item d-flex align-items-center gap-2">
+                    <div class="add-data whiteadd-btn">
+                        <select class="form-control selectdrop-qefault">
+                            <option value="">John Smith</option>
+                            <option value="">John Doe</option>
+                            <option value="">John Smith</option>
+                            <option value="">John Doe</option>
+                        </select>
+                    </div>
+                </div>
+           </div>
+           <div class="maincontent">
+                <div class="chat-wrapper">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-block form-block2">
+                              <h3 class="chat-heading">John Smith</h3>
+                            </div>
+                            <div class="chat-container">
+                              <ul class="chat">
+                                <li class="message left">
+                                  <div class="chat-date">11th February 2025, 09:12</div>
+                                  <div class="chatblock">
+                                    <p>Session 1 Complete!</p>
+                                    <p>Hey coach, great session today</p>
+                                    <p><a href="javascript:void(0);">View Session</a></p>
+                                  </div>
+                                </li>
+                                <li class="message right">
+                                  <div class="chat-date">11th February 2025, 09:12</div>
+                                  <div class="chatblock">
+                                    <p>Awesome, great work, keep it up!</p>
+                                  </div>
+                                </li>
+                              </ul>
+                              <div class="msgsend-form">
+                                <form>
+                                  <div class="input-group form-group">
+                                    <input type="text" class="form-control" placeholder="Type Your Message....">
+                                    <div class="input-group-prepend">
+                                      <button class="btn"><i class="fa fa-paper-plane"></i></button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </main>
+     </div>
+
+    <!-- Add Client Data -->
+    <div class="modal fade large-modal" id="addclient" tabindex="-1" aria-labelledby="addclientModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="addclientModalLabel">Add Client</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+            </div>
+            <div class="modal-body pt-4">
+                <form class="clientwrap">
+                    <div class="row">
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" placeholder="First Name">
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last Name">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" placeholder="Enter Your Email ">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <select class="form-control">
+                            <option>Select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            </select>
+                        </div>
+                      </div>
+                      
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <label>Birthday</label>
+                            <input type="date" class="form-control datepicker" placeholder="dd/mm/yyyy">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input type="number" class="form-control" placeholder="Enter Mobile Number">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <label>Home Number</label>
+                            <input type="number" class="form-control" placeholder="Enter Home Number">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                            <div class="form-group position-relative password-add-client">
+                                <div class="input-password-wrap">
+                                <label>Password</label>
+                                <input type="password" value="" placeholder="Password" class="form-control" id="loginPassword3" name="loginPassword">
+                                <i class="fa fa-eye" id="togglePassword3" style="margin-left: -30px; cursor: pointer;"></i>
+                                </div>
+                            </div>
+                       </div>
+
+                       <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                            <div class="form-group position-relative password-add-client">
+                            <div class="input-password-wrap">
+                                <label>Confirm Password</label>
+                                <input type="password" value="" placeholder="Confirm password" class="form-control" id="loginPassword" name="loginPassword">
+                                <i class="fa fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+                            </div>
+                            </div>
+                        </div>
+                      
+
+                      <div class="col-12">
+                        <div class=" form-group">
+                            <label>Address</label>
+                            <textarea class="form-control" rows="4" placeholder="Enter Your Address"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-0">
+            <button type="button" class="btn btn-primary">Create</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+     <!-- Call Client Data -->
+     <div class="modal fade" id="callClient" tabindex="-1" aria-labelledby="callClientModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="callClientModalLabel">Call XYZ Corporation?</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+            </div>
+            <div class="modal-body pt-4">
+                <div class="text-center mb-3">
+                    <a href="tel:07984534899" class="call-link">
+                        <i class="fa fa-phone"></i>
+                      07984534899</a>
+                  </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Call Client Data -->
+    <div class="modal fade" id="sendinvitaion" tabindex="-1" aria-labelledby="sendinvitaionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="sendinvitaionModalLabel">Invitation Email</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+            </div>
+            <div class="modal-body pt-4">
+                <form action="">
+                    <div class="col-12">
+                        <div class="form-group">
+                        <label>Invitation Email Id</label>
+                        <input type="email" class="form-control" placeholder="Enter Your Email Id">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>

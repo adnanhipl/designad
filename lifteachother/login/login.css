@@ -1,0 +1,107 @@
+.login-wrapper{
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cardbox{
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+}
+
+.signin-logo {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.signin-title{
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 8px;
+    color: var(--black);
+}
+
+.signin-subtitle{
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 500;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.signin-highlight{
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.form-group:last-child{
+    margin-bottom: .5rem;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-password{
+    font-size: 13px;
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.form-check-label{
+    font-size: 13px;
+}
+
+.forgot-password:hover{
+    color: var(--black);
+}
+
+.signup-prompt{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.signup-link{
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.signup-link:hover{
+    color: var(--black);
+}
+
+.buttonform button{
+    width: 100%;
+}
+
+.password-wrapper{
+    position: relative;
+}
+
+.password-icon {
+    position: absolute;
+    right: 13px;
+    top: 15px;
+    color: var(--secondary);
+}
+
+.signup-footer{
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+@media (max-width:480px){
+    .cardbox{
+        padding: 1rem;
+    }
+}

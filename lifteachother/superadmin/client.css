@@ -1,0 +1,19 @@
+.call-link {
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 800;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+
+.call-link:hover{
+    color: var(--primary);
+}
+
+.table-link{
+    color: var(--black);
+}
+
+.table-link:hover{
+    color: var(--primary);
+}

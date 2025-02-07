@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Session Library</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="../main.css">
+      <link rel="stylesheet" href="../sidebar.css">
+      <link rel="stylesheet" href="add-new-session.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+   </head>
+   <body>
+      <div class="sidebarcollapse-wrapper">
+         <aside>
+            <div>
+               <div class="mobile-adminhead d-md-none">
+                  <div class="adminlogo"><a href="javascript:void(0)" data-discover="true"><img
+                     src="../images/darklogo.svg" alt="Logo" class="admin-logo-img"></a></div>
+                  <div class="menu-icon">
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                        </path>
+                     </svg>
+                  </div>
+               </div>
+               <div class="sidebar ">
+                  <div class="sidebarinner">
+                     <div class="adminlogo">
+                        <a href="javascript:void(0)" class="admin-logo-link" data-discover="true"><img
+                           src="../images/darklogo.svg" alt="Logo" class="admin-logo-img"></a>
+                        <div class="sidebarcollapse">
+                           <img src="../images/sidebarcoll.svg" alt="">
+                        </div>
+                     </div>
+                     <div class="flex-column nav">
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="dashboard.html" data-discover="true" title="Dashboard">
+                           <img src="../images/dashboard.svg" alt="">
+                           Dashboard
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="organization.html" data-discover="true" title="Organization">
+                           <img src="../images/organization.svg" alt="">
+                           Organization
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="package.html" data-discover="true" title="Package">
+                           <img src="../images/package.svg" alt="">
+                           Package
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="exercise-library.html" data-discover="true" title="Exercise Library">
+                           <img src="../images/exercise-library.svg" alt="">
+                           Exercise Library
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="sectiontitile.html" data-discover="true" title="Section Title">
+                           <img src="../images/section-tilte.svg" alt="">
+                           Section Title
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="sectionlibrary.html" data-discover="true" title="Section Library">
+                           <img src="../images/section-library.svg" alt="">
+                           Section Library
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link active" href="sessionlibrary.html" data-discover="true" title="Session Library">
+                           <img src="../images/session-library.svg" alt="">
+                           Session Library
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="session-planner.html" data-discover="true" title="Session Planner">
+                           <img src="../images/session-planner.svg" alt="">
+                           Session Planner
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="protocol.html" data-discover="true" title="Protocol">
+                           <img src="../images/protocol.svg" alt="">
+                           Protocol
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="profile.html" data-discover="true" title="Profile">
+                           <img src="../images/user-profile.svg" alt="">
+                           Profile
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="client.html" data-discover="true" title="Client">
+                           <img src="../images/client.svg" alt="">
+                           Client
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="coach.html" data-discover="true" title="Coach">
+                           <img src="../images/coach.svg" alt="">
+                           Coach
+                           </a>
+                        </div>
+                        <div class="nav-item">
+                           <a class="sidebar-item nav-link" href="../login/login.html" data-discover="true" title="Logout">
+                           <img src="../images/logout.svg" alt="">
+                           Logout
+                           </a>
+                        </div>
+                     </div>
+                     <div class="sidebar-bottom">
+                        <p class="sidebar-subtext"><strong>LIFT EACH OTHER © 2020 - 2025</strong><br>91 High Street,
+                           Orpington, BR6 0LF
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </aside>
+         <main class="admin-wrap">
+            <div class="mainhead-wrap">
+               <div class="icon headitem">
+                  <img src="../images/session-library.svg" alt="">
+               </div>
+               <div class="headtitle headitem">
+                  <h2>Session Library</h2>
+               </div>
+               <div class="headitem"></div>
+            </div>
+            <div class="maincontent mb-4 pb-0">
+               <form>
+                  <div class="row mt-3">
+                     <div class="col-12 col-md-6 col-lg-3">
+                        <div class="form-group">
+                           <label for="name">Session Name</label>
+                           <input type="text" class="form-control" id="name" placeholder="Enter Session Name" required>
+                        </div>
+                     </div>
+                     <div class="col-12 col-md-6 col-lg-7">
+                        <div class="form-group">
+                           <label for="name">Intro Text</label>
+                           <input type="text" class="form-control" placeholder="Enter Intro Text" required>
+                        </div>
+                     </div>
+                     <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                        <div class="form-group">
+                           <label for="name">Reset</label>
+                           <button class="resetbtn form-control" type="submit">Reset Session</button>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="addsectionmain-wrapper">
+               <div class="mainhead-wrap customesection-head">
+                  <div class="icon headitem">
+                     <img src="../images/warming.svg" alt="">
+                  </div>
+                  <div class="headtitle headitem">
+                     <div class="dropdown">
+                        <h2 class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Section Title
+                        </h2>
+                        <div class="dropdown-menu wramup-box">
+                           <ul class="wramup-list">
+                              <li>
+                                 <span>Warm Up </span>
+                                 <div class="icon-wrx">
+                                    <img src="../images/warming.svg" alt="icon">
+                                 </div>
+                              </li>
+                              <li>
+                                 <span>Movement Prep & Activation</span>
+                                 <div class="icon-wrx">
+                                    <img src="../images/warming.svg" alt="icon">
+                                 </div>
+                              </li>
+                              <li>
+                                 <span>Main Session</span>
+                                 <div class="icon-wrx">
+                                    <img src="../images/clock.svg" alt="icon">
+                                 </div>
+                              </li>
+                              <li>
+                                 <span>Cool Down</span>
+                                 <div class="icon-wrx">
+                                    <img src="../images/warming.svg" alt="icon">
+                                 </div>
+                              </li>
+                           </ul>
+                           <div class="addbtn-wrap">
+                              <a class="addata-user-data" href="javascript:void(0);" data-bs-toggle="modal"
+                                 data-bs-target="#addtitlemodal">
+                              +Add New
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="headitem groupbtn-item d-flex align-items-center gap-2">
+                     <div class="add-data whiteadd-btn">
+                        <select class="form-control selectdrop-qefault">
+                           <option value="">Custom Section</option>
+                           <option value="">Acro Yoga</option>
+                           <option value="">Athletics</option>
+                           <option value="">Fitness</option>
+                           <option value="">Gymnastics</option>
+                           <option value="">Yoga</option>
+                        </select>
+                     </div>
+                     <div class="add-data whiteadd-btn">
+                        <a href="javascript:void(0)" class="primary-btn">
+                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.2002 8.7002H16.2002" stroke="#171717" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M8.7002 16.2002V1.2002" stroke="#171717" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                           </svg>
+                           Add Exercise
+                        </a>
+                     </div>
+                     <div class="delete-data whiteadd-btn">
+                        <a href="javascript:void(0)" title="Delete Section" class="primary-btn">
+                        <i class="fa fa-trash"></i>
+                        </a>
+                     </div>
+                     <div class="sectioncollapes" title="Collapse" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M19.92 15.05L13.4 8.53001C12.63 7.76001 11.37 7.76001 10.6 8.53001L4.08 15.05" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                     </div>
+                  </div>
+               </div>
+               <div class="maincontent collapse show" id="collapseExample">
+                  <div class="addexercise-section-box mt-4">
+                     <div class="form-row">
+                        <div class="form-group">
+                           <label>Pattern</label>
+                           <select class="form-control selectdrop-qefault">
+                              <option value="">Select</option>
+                              <option value="">Strength</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label>No. of Sets</label>
+                           <select class="form-control selectdrop-qefault">
+                              <option value="">Select</option>
+                              <option value="">1</option>
+                              <option value="">2</option>
+                              <option value="">3</option>
+                              <option value="">4</option>
+                              <option value="">5</option>
+                              <option value="">6</option>
+                              <option value="">7</option>
+                              <option value="">8</option>
+                              <option value="">9</option>
+                              <option value="">10</option>
+                              <option value="">11</option>
+                              <option value="">12</option>
+                              <option value="">13</option>
+                              <option value="">14</option>
+                              <option value="">15</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label>Copy 1st Set</label>
+                           <select class="form-control selectdrop-qefault">
+                              <option value="">Select</option>
+                              <option value="">Yes</option>
+                              <option value="">No</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label for="number">Protocol %</label>
+                           <input type="number" class="form-control" id="name" placeholder="0-100" required>
+                        </div>
+                        <div class="delete-btn">
+                           <a href="javascript:void(0);" class="deleteExercise" title="Delete Exercise">
+                           <i class="fa fa-trash"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="exerciseblock">
+                        <div class="item-block">
+                           <div class="leftlabels">
+                              <div class="title-top">B</div>
+                              <ul class="set-type-list">
+                                 <li>Exercise <span class="float-right ml-2">:</span></li>
+                                 <li>Quantity <span class="float-right ml-2">:</span></li>
+                                 <li>Intensity <span class="float-right ml-2">:</span></li>
+                                 <li>RM <span class="float-right ml-2">:</span></li>
+                                 <li>Rest <span class="float-right ml-2">:</span></li>
+                                 <li>Notes <span class="float-right ml-2">:</span></li>
+                                 <li>Method <span class="float-right ml-2">:</span></li>
+                              </ul>
+                           </div>
+                           <div class="leftlabels">
+                              <div class="title-top">Set 1</div>
+                              <ul class="sets-list">
+                                 <li class="exercise">
+                                    <div class="Squats-dropdown-listing exerciseBoxParent">
+                                       <input type="text"
+                                          class="form-control Squats-recorded exerciseName active"
+                                          placeholder="Exercise Name">
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView"></div>
+                                 </li>
+                                 <li class="quantity">
+                                    <div class="d-flex align-items-center">
+                                       <div class="w-20">
+                                          <select class="form-control selectdrop quantitySelectField">
+                                             <option value="reps">Reps</option>
+                                             <option value="distance">Distance</option>
+                                             <option value="time">Time</option>
+                                             <option value="cals">Cals</option>
+                                             <option value="hold">Hold</option>
+                                          </select>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionReps"
+                                          style="display:block"> <input type="number" min="1" max="100"
+                                          class="form-control quantitySelector selectionRepsValue"
+                                          placeholder="1-100"> </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionDistance"
+                                          style="display:none"> <input type="text"
+                                          class="form-control quantitySelector selectionDistanceValue"
+                                          placeholder="10,000m"> </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionTime"
+                                          style="display:none">
+                                          <div class="ms-wrap "> m <input type="number" min="0" max="59"
+                                             class="form-control quantitySelector minutes quantitySelectorMinutes"
+                                             placeholder="0-59"> s <input type="number" min="0" max="59"
+                                             class="form-control quantitySelector seconds quantitySelectorSeconds"
+                                             placeholder="0-59"> </div>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionHoldTime"
+                                          style="display:none">
+                                          <div class="ms-wrap "> m <input type="number" min="0" max="59"
+                                             class="form-control quantitySelector minutes quantitySelectorHoldMinutes"
+                                             placeholder="0-59"> s <input type="number" min="0" max="59"
+                                             class="form-control quantitySelector seconds quantitySelectorHoldSeconds"
+                                             placeholder="0-59"> </div>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionCals"
+                                          style="display:none"> <input type="number" min="1" max="200"
+                                          class="form-control quantitySelector selectionCalsValue"
+                                          placeholder="1-200"> </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView"></div>
+                                 </li>
+                                 <li class="intensity">
+                                    <div class="d-flex align-items-center box-outer">
+                                       <div class="w-80">
+                                          <select class="form-control selectdrop intensityChange">
+                                             <option value="percentage"
+                                                data-select2-id="select2-data-2183-vji5">%</option>
+                                             <option value="rir">RIR</option>
+                                             <option value="rpe">RPE</option>
+                                             <option value="pace">Pace</option>
+                                             <option value="zone">Zone</option>
+                                          </select>
+                                       </div>
+                                       <div class="w-50 ml-1 intensityPercentage intensitySelection"> <input
+                                          type="number" min="1" max="100"
+                                          class="form-control intensitySelector intensityPercentageValue"
+                                          placeholder="1-100"> </div>
+                                       <div class="w-50 ml-1 intensityRir intensitySelection "
+                                          style="display:none"> <input type="number" min="1" max="10"
+                                          class="form-control intensitySelector intensityRirValue"
+                                          placeholder="1-10"> </div>
+                                       <div class="w-50 ml-1 intensityRpe intensitySelection"
+                                          style="display:none"> <input type="number" min="1" max="10"
+                                          class="form-control intensitySelector intensityRpeValue"
+                                          placeholder="1-10"> </div>
+                                       <div class="w-50 ml-1 intensityPace intensitySelection"
+                                          style="display:none">
+                                          <div class="ms-wrap intensityPaceBoxTime">0Min0s / 0M</div>
+                                          <div class="ms-wrap intensityPaceBox-outer" style="display: none;">
+                                             <div class="intensityPaceBox">
+                                                <label>Time</label>
+                                                <div class="intensityPaceBoxInner"> Minutes <input
+                                                   type="number" min="0" max="59"
+                                                   class="form-control minutes intensityPaceBoxSelect intensityPaceBoxTimeMinute"
+                                                   placeholder="0-59"> Second <input type="number"
+                                                   min="0" max="59"
+                                                   class="form-control seconds intensityPaceBoxSelect intensityPaceBoxTimeSecond"
+                                                   placeholder="0-59"> </div>
+                                             </div>
+                                             <div class="intensityPaceBox">
+                                                <label>Distance</label>
+                                                <div class="intensityPaceBoxInner"> Meters <input
+                                                   type="number" min="0" max="500"
+                                                   class="form-control intensityPaceBoxSelect intensitySelector intensityPaceBoxMeter"
+                                                   placeholder="0-500"> </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="w-50 ml-1 intensityZone intensitySelection"
+                                          style="display:none"> <input type="number" min="1" max="5"
+                                          class="form-control intensitySelector intensityZoneValue"
+                                          placeholder="1-5"> </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView"></div>
+                                 </li>
+                                 <li class="rm">
+                                    <div class="d-flex align-items-center">
+                                       <div class="w-50">
+                                          <select class="form-control selectdrop rmSelect">
+                                             <option value="140" selected="selected">1RM</option>
+                                             <option value="135">2RM</option>
+                                             <option value="125">3RM</option>
+                                             <option value="115">5RM</option>
+                                             <option value="95">10RM</option>
+                                             <option value="70">20RM</option>
+                                          </select>
+                                       </div>
+                                       <div class="w-30"> <input type="number" class="form-control weightRm"
+                                          placeholder="140" value="140"> </div>
+                                       <div class="w-20 ml-1"> <span class="rmp-text"> Kg </span> </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView topplacement">
+                                    </div>
+                                 </li>
+                                 <li class="rest">
+                                    <div class="ms-wrap "> m <input type="number" min="0" max="59"
+                                       class="form-control minutes quantitySelector restMinutes"
+                                       placeholder="0-59"> s <input type="number" min="0" max="59"
+                                       class="form-control seconds quantitySelector restSeconds"
+                                       placeholder="0-59"> </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView topplacement">
+                                    </div>
+                                 </li>
+                                 <li class="notes">
+                                    <div><input type="text" class="form-control notesWork"
+                                       placeholder="Working up..."></div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView topplacement">
+                                    </div>
+                                 </li>
+                                 <li class="methodParent">
+                                    <div>
+                                       <ul class="method-listing-top d-flex ">
+                                          <li>
+                                             <select class="form-control selectdrop selectMethod">
+                                                <option value="">Select</option>
+                                                <option value="dynamic">Dynamic</option>
+                                                <option value="normal">Normal</option>
+                                                <option value="tempo">Tempo</option>
+                                                <option value="previous">Previous</option>
+                                             </select>
+                                          </li>
+                                       </ul>
+                                       <ul class="method-listing d-flex tempoMethod"
+                                          style="display:none!important">
+                                          <li> <input type="number" min="1" max="20" class="form-control m1"
+                                             placeholder="1-20"> </li>
+                                          -
+                                          <li> <input type="number" min="1" max="20" class="form-control m2"
+                                             placeholder="1-20"> </li>
+                                          -
+                                          <li> <input type="number" min="1" max="20" class="form-control m3"
+                                             placeholder="1-20"> </li>
+                                          -
+                                          <li> <input type="number" min="1" max="20" class="form-control m4"
+                                             placeholder="1-20"> </li>
+                                       </ul>
+                                       <ul class="method-listing-top d-flex previousMethod"
+                                          style="display:none!important">
+                                          <li>
+                                             <select class="form-control previousRecords selectdrop">
+                                                <option value="1-1-x-1">1-1-x-1</option>
+                                                <option value="1-2-x-1">1-2-x-1</option>
+                                                <option value="1-3-x-1">1-3-x-1</option>
+                                                <option value="1-4-x-1">1-4-x-1</option>
+                                                <option value="1-5-x-1">1-5-x-1</option>
+                                             </select>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView topplacement">
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="leftlabels">
+                              <div class="title-top">Set 2</div>
+                              <ul class="sets-list">
+                                 <li style="height:35px;"></li>
+                                 <li class="quantity">
+                                    <div class="d-flex align-items-center">
+                                       <div class="w-20">
+                                          <select class="form-control selectdrop quantitySelectField">
+                                             <option value="reps" selected="selected" data-select2-id="select2-data-1121-zufh">Reps</option>
+                                             <option value="distance">Distance</option>
+                                             <option value="time">Time</option>
+                                             <option value="cals">Cals</option>
+                                             <option value="hold">Hold</option>
+                                          </select>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionReps" style="display:block"> <input type="number" min="1" max="100" class="form-control quantitySelector selectionRepsValue" placeholder="1-100"> </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionDistance" style="display:none"> <input type="text" class="form-control quantitySelector selectionDistanceValue" placeholder="10,000m"> </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionTime" style="display:none">
+                                          <div class="ms-wrap "> m <input type="number" min="0" max="59" class="form-control quantitySelector minutes quantitySelectorMinutes" placeholder="0-59"> s <input type="number" min="0" max="59" class="form-control quantitySelector seconds quantitySelectorSeconds" placeholder="0-59"> </div>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionHoldTime" style="display:none">
+                                          <div class="ms-wrap "> m <input type="number" min="0" max="59" class="form-control quantitySelector minutes quantitySelectorHoldMinutes" placeholder="0-59"> s <input type="number" min="0" max="59" class="form-control quantitySelector seconds quantitySelectorHoldSeconds" placeholder="0-59"> </div>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionCals" style="display:none"> <input type="number" min="1" max="200" class="form-control quantitySelector selectionCalsValue" placeholder="1-200"> </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView"></div>
+                                 </li>
+                                 <li class="intensity">
+                                    <div class="d-flex align-items-center box-outer">
+                                       <div class="w-80">
+                                          <select class="form-control selectdrop intensityChange">
+                                             <option value="percentage" data-select2-id="select2-data-1128-rgxl">%</option>
+                                             <option value="rir">RIR</option>
+                                             <option value="rpe">RPE</option>
+                                             <option value="pace">Pace</option>
+                                             <option value="zone">Zone</option>
+                                          </select>
+                                       </div>
+                                       <div class="w-50 ml-1 intensityPercentage intensitySelection"> <input type="number" min="1" max="100" class="form-control intensitySelector intensityPercentageValue" placeholder="1-100"> </div>
+                                       <div class="w-50 ml-1 intensityRir intensitySelection " style="display:none"> <input type="number" min="1" max="10" class="form-control intensitySelector intensityRirValue" placeholder="1-10"> </div>
+                                       <div class="w-50 ml-1 intensityRpe intensitySelection" style="display:none"> <input type="number" min="1" max="10" class="form-control intensitySelector intensityRpeValue" placeholder="1-10"> </div>
+                                       <div class="w-50 ml-1 intensityPace intensitySelection" style="display:none">
+                                          <div class="ms-wrap intensityPaceBoxTime">0Min0s / 0M</div>
+                                          <div class="ms-wrap intensityPaceBox-outer" style="display: none;">
+                                             <div class="intensityPaceBox">
+                                                <label>Time</label>
+                                                <div class="intensityPaceBoxInner"> Minutes <input type="number" min="0" max="59" class="form-control minutes intensityPaceBoxSelect intensityPaceBoxTimeMinute" placeholder="0-59"> Second <input type="number" min="0" max="59" class="form-control seconds intensityPaceBoxSelect intensityPaceBoxTimeSecond" placeholder="0-59"> </div>
+                                             </div>
+                                             <div class="intensityPaceBox">
+                                                <label>Distance</label>
+                                                <div class="intensityPaceBoxInner"> Meters <input type="number" min="0" max="500" class="form-control intensityPaceBoxSelect intensitySelector intensityPaceBoxMeter" placeholder="0-500"> </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="w-50 ml-1 intensityZone intensitySelection" style="display:none"> <input type="number" min="1" max="5" class="form-control intensitySelector intensityZoneValue" placeholder="1-5"> </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView"></div>
+                                 </li>
+                                 <li style="height:35px;"></li>
+                                 <li class="rest">
+                                    <div class="ms-wrap "> m <input type="number" min="0" max="59" class="form-control minutes quantitySelector restMinutes" placeholder="0-59"> s <input type="number" min="0" max="59" class="form-control seconds quantitySelector restSeconds" placeholder="0-59"> </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView topplacement"></div>
+                                 </li>
+                                 <li style="height:35px;"></li>
+                                 <li style="height:35px;"></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrow-nav">
+                     <button type="button" role="presentation" class="arrow-prev disabled">
+                        <span aria-label="Previous">
+                           <svg width="30" height="20" viewBox="0 0 30 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M0.170234 9.64513L6.14327 3.00842C6.27069 2.86773 6.44856 2.78809 6.63704 2.78809H10.6191C10.8805 2.78809 11.1181 2.94206 11.2257 3.18098C11.3318 3.42123 11.288 3.7013 11.1128 3.89509L5.53933 10.0885L11.1128 16.2805C11.288 16.4756 11.3332 16.7557 11.2257 16.9946C11.1181 17.2349 10.8805 17.3888 10.6191 17.3888H6.63704C6.44856 17.3888 6.27069 17.3079 6.14327 17.1698L0.170234 10.5331C-0.0567415 10.2809 -0.0567415 9.896 0.170234 9.64513Z"
+                                 fill="#111111" />
+                              <path
+                                 d="M18.8868 9.51232L24.8598 2.87561C24.9872 2.73491 25.1651 2.65527 25.3536 2.65527H29.3356C29.5971 2.65527 29.8347 2.80924 29.9422 3.04817C30.0484 3.28841 30.0046 3.56848 29.8294 3.76228L24.2558 9.95565L29.8294 16.1477C30.0046 16.3428 30.0497 16.6229 29.9422 16.8618C29.8347 17.1021 29.5971 17.256 29.3356 17.256H25.3536C25.1651 17.256 24.9872 17.1751 24.8598 17.037L18.8868 10.4003C18.6598 10.1481 18.6598 9.76318 18.8868 9.51232Z"
+                                 fill="#C3C3C3" />
+                              <g clip-path="url(#clip0_2999_2622)">
+                                 <path
+                                    d="M9.86082 9.51232L15.8339 2.87561C15.9613 2.73491 16.1391 2.65527 16.3276 2.65527H20.3096C20.5711 2.65527 20.8087 2.80924 20.9162 3.04817C21.0224 3.28841 20.9786 3.56848 20.8034 3.76228L15.2299 9.95565L20.8034 16.1477C20.9786 16.3428 21.0238 16.6229 20.9162 16.8618C20.8087 17.102 20.5711 17.256 20.3096 17.256H16.3276C16.1391 17.256 15.9613 17.1751 15.8339 17.037L9.86082 10.4003C9.63384 10.1481 9.63384 9.76318 9.86082 9.51232Z"
+                                    fill="#878787" />
+                              </g>
+                              <defs>
+                                 <clipPath id="clip0_2999_2622">
+                                    <rect width="19.9112" height="19.9112" fill="white"
+                                       transform="matrix(-1 0 0 1 29.6018 0)" />
+                                 </clipPath>
+                              </defs>
+                           </svg>
+                        </span>
+                     </button>
+                     <button type="button" role="presentation" class="arrow-next">
+                        <span aria-label="Next">
+                           <svg width="30" height="20" viewBox="0 0 30 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5514 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7743 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7743 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5514 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0567 10.2809 30.0567 9.896 29.8298 9.64513Z"
+                                 fill="#111111" />
+                              <path
+                                 d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28841 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z"
+                                 fill="#C3C3C3" />
+                              <g clip-path="url(#clip0_3015_2631)">
+                                 <path
+                                    d="M20.1392 9.51232L14.1661 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80924 9.08376 3.04817C8.97757 3.28841 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.102 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1661 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76318 20.1392 9.51232Z"
+                                    fill="#878787" />
+                              </g>
+                              <defs>
+                                 <clipPath id="clip0_3015_2631">
+                                    <rect width="19.9112" height="19.9112" fill="white"
+                                       transform="translate(0.398224)" />
+                                 </clipPath>
+                              </defs>
+                           </svg>
+                        </span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="addsectionmain-wrapper">
+               <div class="mainhead-wrap customesection-head">
+                  <div class="icon headitem">
+                     <img src="../images/warming.svg" alt="">
+                  </div>
+                  <div class="headtitle headitem">
+                     <div class="dropdown">
+                        <h2 class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Warm Up</h2>
+                        <div class="dropdown-menu wramup-box">
+                           <ul class="wramup-list">
+                              <li>
+                                 <span>Warm Up </span>
+                                 <div class="icon-wrx">
+                                    <img src="../images/warming.svg" alt="icon">
+                                 </div>
+                              </li>
+                              <li>
+                                 <span>Movement Prep & Activation</span>
+                                 <div class="icon-wrx">
+                                    <img src="../images/warming.svg" alt="icon">
+                                 </div>
+                              </li>
+                              <li>
+                                 <span>Main Session</span>
+                                 <div class="icon-wrx">
+                                    <img src="../images/clock.svg" alt="icon">
+                                 </div>
+                              </li>
+                              <li>
+                                 <span>Cool Down</span>
+                                 <div class="icon-wrx">
+                                    <img src="../images/warming.svg" alt="icon">
+                                 </div>
+                              </li>
+                           </ul>
+                           <div class="addbtn-wrap">
+                              <a class="addata-user-data" href="javascript:void(0);" data-bs-toggle="modal"
+                                 data-bs-target="#addtitlemodal">
+                              +Add New
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="headitem groupbtn-item d-flex align-items-center gap-2">
+                     <div class="add-data whiteadd-btn">
+                        <select class="form-control selectdrop-qefault">
+                           <option value="">Custom Section</option>
+                           <option value="">Acro Yoga</option>
+                           <option value="">Athletics</option>
+                           <option value="">Fitness</option>
+                           <option value="">Gymnastics</option>
+                           <option value="">Yoga</option>
+                        </select>
+                     </div>
+                     <div class="add-data whiteadd-btn">
+                        <a href="javascript:void(0)" class="primary-btn">
+                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.2002 8.7002H16.2002" stroke="#171717" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M8.7002 16.2002V1.2002" stroke="#171717" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                           </svg>
+                           Add Exercise
+                        </a>
+                     </div>
+                     <div class="delete-data whiteadd-btn">
+                        <a href="javascript:void(0)" title="Delete Section" class="primary-btn">
+                        <i class="fa fa-trash"></i>
+                        </a>
+                     </div>
+                     <div class="sectioncollapes" title="Collapse" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M19.92 15.05L13.4 8.53001C12.63 7.76001 11.37 7.76001 10.6 8.53001L4.08 15.05" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                     </div>
+                  </div>
+               </div>
+               <div class="maincontent collapse" id="collapseExample2">
+                  <div class="addexercise-section-box mt-4">
+                     <div class="form-row">
+                        <div class="form-group">
+                           <label>Pattern</label>
+                           <select class="form-control selectdrop-qefault">
+                              <option value="">Select</option>
+                              <option value="">Strength</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label>No. of Sets</label>
+                           <select class="form-control selectdrop-qefault">
+                              <option value="">Select</option>
+                              <option value="">1</option>
+                              <option value="">2</option>
+                              <option value="">3</option>
+                              <option value="">4</option>
+                              <option value="">5</option>
+                              <option value="">6</option>
+                              <option value="">7</option>
+                              <option value="">8</option>
+                              <option value="">9</option>
+                              <option value="">10</option>
+                              <option value="">11</option>
+                              <option value="">12</option>
+                              <option value="">13</option>
+                              <option value="">14</option>
+                              <option value="">15</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label>Copy 1st Set</label>
+                           <select class="form-control selectdrop-qefault">
+                              <option value="">Select</option>
+                              <option value="">Yes</option>
+                              <option value="">No</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label for="number">Protocol %</label>
+                           <input type="number" class="form-control" id="name" placeholder="0-100" required>
+                        </div>
+                        <div class="delete-btn">
+                           <a href="javascript:void(0);" class="deleteExercise" title="Delete Exercise">
+                           <i class="fa fa-trash"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="exerciseblock">
+                        <div class="item-block">
+                           <div class="leftlabels">
+                              <div class="title-top">B</div>
+                              <ul class="set-type-list">
+                                 <li>Exercise <span class="float-right ml-2">:</span></li>
+                                 <li>Quantity <span class="float-right ml-2">:</span></li>
+                                 <li>Intensity <span class="float-right ml-2">:</span></li>
+                                 <li>RM <span class="float-right ml-2">:</span></li>
+                                 <li>Rest <span class="float-right ml-2">:</span></li>
+                                 <li>Notes <span class="float-right ml-2">:</span></li>
+                                 <li>Method <span class="float-right ml-2">:</span></li>
+                              </ul>
+                           </div>
+                           <div class="leftlabels">
+                              <div class="title-top">Set 1</div>
+                              <ul class="sets-list">
+                                 <li class="exercise">
+                                    <div class="Squats-dropdown-listing exerciseBoxParent">
+                                       <input type="text"
+                                          class="form-control Squats-recorded exerciseName active"
+                                          placeholder="Exercise Name">
+                                       <!-- <button href="" class="btn Squats-recorded" type="button">                                    Squats                                  </button> -->
+                                       <div class="Squats-drop-recorded exerciseFilterActive d-block">
+                                          <div class="box-sqa-drop d-flex">
+                                             <div class="default-box exerciseBox">
+                                                <div class="exerciseList">
+                                                   <ul>
+                                                      <li>Burpee</li>
+                                                      <li>Front Squat</li>
+                                                      <li>Air Squat</li>
+                                                      <li>Back Squat</li>
+                                                      <li>Jump Squat</li>
+                                                      <li>Sumo Squat</li>
+                                                      <li>Deadlift</li>
+                                                      <li>Deadlift1</li>
+                                                      <li>Deadlift2</li>
+                                                      <li>Deadlift3</li>
+                                                      <li>Deadlift4</li>
+                                                      <li>Deadlift5</li>
+                                                      <li>Deadlift6</li>
+                                                   </ul>
+                                                   <p class="noRecords" style="display:none">No Records!!
+                                                   </p>
+                                                </div>
+                                                <hr>
+                                                <div class="default-library d-flex"> <button type="button"
+                                                   class="exerciseGet active"
+                                                   data-type="defaultLibrary"> <span>Default
+                                                   Library</span> </button> <button type="button"
+                                                      class="exerciseGet" data-type="myLibrary"> <span>My
+                                                   Library</span> </button> 
+                                                </div>
+                                             </div>
+                                             <div class="clear-tags-box">
+                                                <ul class="clear-tags-box-list tagBox">
+                                                   <li>
+                                                     <div class="form-check">
+                                                       <input type="checkbox" class="form-check-input" id="customUpper">
+                                                       <label class="form-check-label" for="customUpper">Upper</label>
+                                                       <ul class="lear-tags-box-sub-list childClass">
+                                                         <li>
+                                                           <div class="form-check">
+                                                             <input type="checkbox" class="form-check-input" id="Sholders">
+                                                             <label class="form-check-label" for="Sholders">Shoulders</label>
+                                                           </div>
+                                                         </li>
+                                                         <li>
+                                                           <div class="form-check">
+                                                             <input type="checkbox" class="form-check-input" id="Chest">
+                                                             <label class="form-check-label" for="Chest">Chest</label>
+                                                           </div>
+                                                         </li>
+                                                         <li>
+                                                           <div class="form-check">
+                                                             <input type="checkbox" class="form-check-input" id="Back">
+                                                             <label class="form-check-label" for="Back">Back</label>
+                                                           </div>
+                                                         </li>
+                                                         <li>
+                                                           <div class="form-check">
+                                                             <input type="checkbox" class="form-check-input" id="Arms">
+                                                             <label class="form-check-label" for="Arms">Arms</label>
+                                                           </div>
+                                                         </li>
+                                                       </ul>
+                                                     </div>
+                                                   </li>
+                                                   <li>
+                                                     <div class="form-check">
+                                                       <input type="checkbox" class="form-check-input" id="customLower">
+                                                       <label class="form-check-label" for="customLower">Lower</label>
+                                                       <ul class="list-unstyled">
+                                                         <li>
+                                                           <div class="form-check">
+                                                             <input type="checkbox" class="form-check-input" id="Quadriceps">
+                                                             <label class="form-check-label" for="Quadriceps">Quadriceps</label>
+                                                           </div>
+                                                         </li>
+                                                         <li>
+                                                           <div class="form-check">
+                                                             <input type="checkbox" class="form-check-input" id="Hamstrings">
+                                                             <label class="form-check-label" for="Hamstrings">Hamstrings</label>
+                                                           </div>
+                                                         </li>
+                                                       </ul>
+                                                     </div>
+                                                   </li>
+                                                 </ul>
+                                                <hr>
+                                                <div class="default-library"> <button type="button"
+                                                   class="clearTag"> Clear Tag </button> </div>
+                                             </div>
+                                          </div>
+                                          <div class="exercise-wrap"> <a class="position-static exercise-btn"
+                                             href="javascript:void(0);" data-bs-toggle="modal"
+                                             data-bs-target="#addexercise"> Add New Exercise to
+                                             Library </a> 
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView"></div>
+                                 </li>
+                                 <li class="quantity">
+                                    <div class="d-flex align-items-center">
+                                       <div class="w-20">
+                                          <select class="form-control selectdrop quantitySelectField">
+                                             <option value="reps">Reps</option>
+                                             <option value="distance">Distance</option>
+                                             <option value="time">Time</option>
+                                             <option value="cals">Cals</option>
+                                             <option value="hold">Hold</option>
+                                          </select>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionReps"
+                                          style="display:block"> <input type="number" min="1" max="100"
+                                          class="form-control quantitySelector selectionRepsValue"
+                                          placeholder="1-100"> </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionDistance"
+                                          style="display:none"> <input type="text"
+                                          class="form-control quantitySelector selectionDistanceValue"
+                                          placeholder="10,000m"> </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionTime"
+                                          style="display:none">
+                                          <div class="ms-wrap "> m <input type="number" min="0" max="59"
+                                             class="form-control quantitySelector minutes quantitySelectorMinutes"
+                                             placeholder="0-59"> s <input type="number" min="0" max="59"
+                                             class="form-control quantitySelector seconds quantitySelectorSeconds"
+                                             placeholder="0-59"> </div>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionHoldTime"
+                                          style="display:none">
+                                          <div class="ms-wrap "> m <input type="number" min="0" max="59"
+                                             class="form-control quantitySelector minutes quantitySelectorHoldMinutes"
+                                             placeholder="0-59"> s <input type="number" min="0" max="59"
+                                             class="form-control quantitySelector seconds quantitySelectorHoldSeconds"
+                                             placeholder="0-59"> </div>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionCals"
+                                          style="display:none"> <input type="number" min="1" max="200"
+                                          class="form-control quantitySelector selectionCalsValue"
+                                          placeholder="1-200"> </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView"></div>
+                                 </li>
+                                 <li class="intensity">
+                                    <div class="d-flex align-items-center box-outer">
+                                       <div class="w-80">
+                                          <select class="form-control selectdrop intensityChange">
+                                             <option value="percentage"
+                                                data-select2-id="select2-data-2183-vji5">%</option>
+                                             <option value="rir">RIR</option>
+                                             <option value="rpe">RPE</option>
+                                             <option value="pace">Pace</option>
+                                             <option value="zone">Zone</option>
+                                          </select>
+                                       </div>
+                                       <div class="w-50 ml-1 intensityPercentage intensitySelection"> <input
+                                          type="number" min="1" max="100"
+                                          class="form-control intensitySelector intensityPercentageValue"
+                                          placeholder="1-100"> </div>
+                                       <div class="w-50 ml-1 intensityRir intensitySelection "
+                                          style="display:none"> <input type="number" min="1" max="10"
+                                          class="form-control intensitySelector intensityRirValue"
+                                          placeholder="1-10"> </div>
+                                       <div class="w-50 ml-1 intensityRpe intensitySelection"
+                                          style="display:none"> <input type="number" min="1" max="10"
+                                          class="form-control intensitySelector intensityRpeValue"
+                                          placeholder="1-10"> </div>
+                                       <div class="w-50 ml-1 intensityPace intensitySelection"
+                                          style="display:none">
+                                          <div class="ms-wrap intensityPaceBoxTime">0Min0s / 0M</div>
+                                          <div class="ms-wrap intensityPaceBox-outer" style="display: none;">
+                                             <div class="intensityPaceBox">
+                                                <label>Time</label>
+                                                <div class="intensityPaceBoxInner"> Minutes <input
+                                                   type="number" min="0" max="59"
+                                                   class="form-control minutes intensityPaceBoxSelect intensityPaceBoxTimeMinute"
+                                                   placeholder="0-59"> Second <input type="number"
+                                                   min="0" max="59"
+                                                   class="form-control seconds intensityPaceBoxSelect intensityPaceBoxTimeSecond"
+                                                   placeholder="0-59"> </div>
+                                             </div>
+                                             <div class="intensityPaceBox">
+                                                <label>Distance</label>
+                                                <div class="intensityPaceBoxInner"> Meters <input
+                                                   type="number" min="0" max="500"
+                                                   class="form-control intensityPaceBoxSelect intensitySelector intensityPaceBoxMeter"
+                                                   placeholder="0-500"> </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="w-50 ml-1 intensityZone intensitySelection"
+                                          style="display:none"> <input type="number" min="1" max="5"
+                                          class="form-control intensitySelector intensityZoneValue"
+                                          placeholder="1-5"> </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView"></div>
+                                 </li>
+                                 <li class="rm">
+                                    <div class="d-flex align-items-center">
+                                       <div class="w-50">
+                                          <select class="form-control selectdrop rmSelect">
+                                             <option value="140" selected="selected">1RM</option>
+                                             <option value="135">2RM</option>
+                                             <option value="125">3RM</option>
+                                             <option value="115">5RM</option>
+                                             <option value="95">10RM</option>
+                                             <option value="70">20RM</option>
+                                          </select>
+                                       </div>
+                                       <div class="w-30"> <input type="number" class="form-control weightRm"
+                                          placeholder="140" value="140"> </div>
+                                       <div class="w-20 ml-1"> <span class="rmp-text"> Kg </span> </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView topplacement">
+                                    </div>
+                                 </li>
+                                 <li class="rest">
+                                    <div class="ms-wrap "> m <input type="number" min="0" max="59"
+                                       class="form-control minutes quantitySelector restMinutes"
+                                       placeholder="0-59"> s <input type="number" min="0" max="59"
+                                       class="form-control seconds quantitySelector restSeconds"
+                                       placeholder="0-59"> </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView topplacement">
+                                    </div>
+                                 </li>
+                                 <li class="notes">
+                                    <div><input type="text" class="form-control notesWork"
+                                       placeholder="Working up..."></div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView topplacement">
+                                    </div>
+                                 </li>
+                                 <li class="methodParent">
+                                    <div>
+                                       <ul class="method-listing-top d-flex ">
+                                          <li>
+                                             <select class="form-control selectdrop selectMethod">
+                                                <option value="">Select</option>
+                                                <option value="dynamic">Dynamic</option>
+                                                <option value="normal">Normal</option>
+                                                <option value="tempo">Tempo</option>
+                                                <option value="previous">Previous</option>
+                                             </select>
+                                          </li>
+                                       </ul>
+                                       <ul class="method-listing d-flex tempoMethod"
+                                          style="display:none!important">
+                                          <li> <input type="number" min="1" max="20" class="form-control m1"
+                                             placeholder="1-20"> </li>
+                                          -
+                                          <li> <input type="number" min="1" max="20" class="form-control m2"
+                                             placeholder="1-20"> </li>
+                                          -
+                                          <li> <input type="number" min="1" max="20" class="form-control m3"
+                                             placeholder="1-20"> </li>
+                                          -
+                                          <li> <input type="number" min="1" max="20" class="form-control m4"
+                                             placeholder="1-20"> </li>
+                                       </ul>
+                                       <ul class="method-listing-top d-flex previousMethod"
+                                          style="display:none!important">
+                                          <li>
+                                             <select class="form-control previousRecords selectdrop">
+                                                <option value="1-1-x-1">1-1-x-1</option>
+                                                <option value="1-2-x-1">1-2-x-1</option>
+                                                <option value="1-3-x-1">1-3-x-1</option>
+                                                <option value="1-4-x-1">1-4-x-1</option>
+                                                <option value="1-5-x-1">1-5-x-1</option>
+                                             </select>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView topplacement">
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="leftlabels">
+                              <div class="title-top">Set 2</div>
+                              <ul class="sets-list">
+                                 <li style="height:35px;"></li>
+                                 <li class="quantity">
+                                    <div class="d-flex align-items-center">
+                                       <div class="w-20">
+                                          <select class="form-control selectdrop quantitySelectField">
+                                             <option value="reps" selected="selected" data-select2-id="select2-data-1121-zufh">Reps</option>
+                                             <option value="distance">Distance</option>
+                                             <option value="time">Time</option>
+                                             <option value="cals">Cals</option>
+                                             <option value="hold">Hold</option>
+                                          </select>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionReps" style="display:block"> <input type="number" min="1" max="100" class="form-control quantitySelector selectionRepsValue" placeholder="1-100"> </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionDistance" style="display:none"> <input type="text" class="form-control quantitySelector selectionDistanceValue" placeholder="10,000m"> </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionTime" style="display:none">
+                                          <div class="ms-wrap "> m <input type="number" min="0" max="59" class="form-control quantitySelector minutes quantitySelectorMinutes" placeholder="0-59"> s <input type="number" min="0" max="59" class="form-control quantitySelector seconds quantitySelectorSeconds" placeholder="0-59"> </div>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionHoldTime" style="display:none">
+                                          <div class="ms-wrap "> m <input type="number" min="0" max="59" class="form-control quantitySelector minutes quantitySelectorHoldMinutes" placeholder="0-59"> s <input type="number" min="0" max="59" class="form-control quantitySelector seconds quantitySelectorHoldSeconds" placeholder="0-59"> </div>
+                                       </div>
+                                       <div class="w-50 ml-1 quantitySelection selectionCals" style="display:none"> <input type="number" min="1" max="200" class="form-control quantitySelector selectionCalsValue" placeholder="1-200"> </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView"></div>
+                                 </li>
+                                 <li class="intensity">
+                                    <div class="d-flex align-items-center box-outer">
+                                       <div class="w-80">
+                                          <select class="form-control selectdrop intensityChange">
+                                             <option value="percentage" data-select2-id="select2-data-1128-rgxl">%</option>
+                                             <option value="rir">RIR</option>
+                                             <option value="rpe">RPE</option>
+                                             <option value="pace">Pace</option>
+                                             <option value="zone">Zone</option>
+                                          </select>
+                                       </div>
+                                       <div class="w-50 ml-1 intensityPercentage intensitySelection"> <input type="number" min="1" max="100" class="form-control intensitySelector intensityPercentageValue" placeholder="1-100"> </div>
+                                       <div class="w-50 ml-1 intensityRir intensitySelection " style="display:none"> <input type="number" min="1" max="10" class="form-control intensitySelector intensityRirValue" placeholder="1-10"> </div>
+                                       <div class="w-50 ml-1 intensityRpe intensitySelection" style="display:none"> <input type="number" min="1" max="10" class="form-control intensitySelector intensityRpeValue" placeholder="1-10"> </div>
+                                       <div class="w-50 ml-1 intensityPace intensitySelection" style="display:none">
+                                          <div class="ms-wrap intensityPaceBoxTime">0Min0s / 0M</div>
+                                          <div class="ms-wrap intensityPaceBox-outer" style="display: none;">
+                                             <div class="intensityPaceBox">
+                                                <label>Time</label>
+                                                <div class="intensityPaceBoxInner"> Minutes <input type="number" min="0" max="59" class="form-control minutes intensityPaceBoxSelect intensityPaceBoxTimeMinute" placeholder="0-59"> Second <input type="number" min="0" max="59" class="form-control seconds intensityPaceBoxSelect intensityPaceBoxTimeSecond" placeholder="0-59"> </div>
+                                             </div>
+                                             <div class="intensityPaceBox">
+                                                <label>Distance</label>
+                                                <div class="intensityPaceBoxInner"> Meters <input type="number" min="0" max="500" class="form-control intensityPaceBoxSelect intensitySelector intensityPaceBoxMeter" placeholder="0-500"> </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="w-50 ml-1 intensityZone intensitySelection" style="display:none"> <input type="number" min="1" max="5" class="form-control intensitySelector intensityZoneValue" placeholder="1-5"> </div>
+                                    </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView"></div>
+                                 </li>
+                                 <li style="height:35px;"></li>
+                                 <li class="rest">
+                                    <div class="ms-wrap"> m <input type="number" min="0" max="59" class="form-control minutes quantitySelector restMinutes" placeholder="0-59"> s <input type="number" min="0" max="59" class="form-control seconds quantitySelector restSeconds" placeholder="0-59"> </div>
+                                    <div class="ms-wrap intensityPaceBox-outer-sec backRecordView topplacement"></div>
+                                 </li>
+                                 <li style="height:35px;"></li>
+                                 <li style="height:35px;"></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrow-nav">
+                     <button type="button" role="presentation" class="arrow-prev disabled">
+                        <span aria-label="Previous">
+                           <svg width="30" height="20" viewBox="0 0 30 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M0.170234 9.64513L6.14327 3.00842C6.27069 2.86773 6.44856 2.78809 6.63704 2.78809H10.6191C10.8805 2.78809 11.1181 2.94206 11.2257 3.18098C11.3318 3.42123 11.288 3.7013 11.1128 3.89509L5.53933 10.0885L11.1128 16.2805C11.288 16.4756 11.3332 16.7557 11.2257 16.9946C11.1181 17.2349 10.8805 17.3888 10.6191 17.3888H6.63704C6.44856 17.3888 6.27069 17.3079 6.14327 17.1698L0.170234 10.5331C-0.0567415 10.2809 -0.0567415 9.896 0.170234 9.64513Z"
+                                 fill="#111111" />
+                              <path
+                                 d="M18.8868 9.51232L24.8598 2.87561C24.9872 2.73491 25.1651 2.65527 25.3536 2.65527H29.3356C29.5971 2.65527 29.8347 2.80924 29.9422 3.04817C30.0484 3.28841 30.0046 3.56848 29.8294 3.76228L24.2558 9.95565L29.8294 16.1477C30.0046 16.3428 30.0497 16.6229 29.9422 16.8618C29.8347 17.1021 29.5971 17.256 29.3356 17.256H25.3536C25.1651 17.256 24.9872 17.1751 24.8598 17.037L18.8868 10.4003C18.6598 10.1481 18.6598 9.76318 18.8868 9.51232Z"
+                                 fill="#C3C3C3" />
+                              <g clip-path="url(#clip0_2999_2622)">
+                                 <path
+                                    d="M9.86082 9.51232L15.8339 2.87561C15.9613 2.73491 16.1391 2.65527 16.3276 2.65527H20.3096C20.5711 2.65527 20.8087 2.80924 20.9162 3.04817C21.0224 3.28841 20.9786 3.56848 20.8034 3.76228L15.2299 9.95565L20.8034 16.1477C20.9786 16.3428 21.0238 16.6229 20.9162 16.8618C20.8087 17.102 20.5711 17.256 20.3096 17.256H16.3276C16.1391 17.256 15.9613 17.1751 15.8339 17.037L9.86082 10.4003C9.63384 10.1481 9.63384 9.76318 9.86082 9.51232Z"
+                                    fill="#878787" />
+                              </g>
+                              <defs>
+                                 <clipPath id="clip0_2999_2622">
+                                    <rect width="19.9112" height="19.9112" fill="white"
+                                       transform="matrix(-1 0 0 1 29.6018 0)" />
+                                 </clipPath>
+                              </defs>
+                           </svg>
+                        </span>
+                     </button>
+                     <button type="button" role="presentation" class="arrow-next">
+                        <span aria-label="Next">
+                           <svg width="30" height="20" viewBox="0 0 30 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5514 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7743 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7743 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5514 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0567 10.2809 30.0567 9.896 29.8298 9.64513Z"
+                                 fill="#111111" />
+                              <path
+                                 d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28841 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z"
+                                 fill="#C3C3C3" />
+                              <g clip-path="url(#clip0_3015_2631)">
+                                 <path
+                                    d="M20.1392 9.51232L14.1661 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80924 9.08376 3.04817C8.97757 3.28841 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.102 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1661 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76318 20.1392 9.51232Z"
+                                    fill="#878787" />
+                              </g>
+                              <defs>
+                                 <clipPath id="clip0_3015_2631">
+                                    <rect width="19.9112" height="19.9112" fill="white"
+                                       transform="translate(0.398224)" />
+                                 </clipPath>
+                              </defs>
+                           </svg>
+                        </span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="centerbutton">
+               <div class="add-data mb-3">
+                  <a href="javascript:void(0)" class="primary-btn">
+                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.2002 8.7002H16.2002" stroke="#171717" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                        <path d="M8.7002 16.2002V1.2002" stroke="#171717" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                     </svg>
+                     Add Section
+                  </a>
+               </div>
+               <div class="add-data">
+                  <a href="javascript:void(0)" class="success-btn">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.9375 19.875V14.8125C6.9375 14.1912 7.44118 13.6875 8.0625 13.6875H15.9375C16.5588 13.6875 17.0625 14.1912 17.0625 14.8125V20.4375M14.8125 7.5L8.0625 7.5C7.44118 7.5 6.9375 6.99632 6.9375 6.375L6.9375 3M20.4351 6.93513L17.0649 3.56487C16.7032 3.20319 16.2127 3 15.7012 3H4.92857C3.86344 3 3 3.86344 3 4.92857V19.0714C3 20.1366 3.86344 21 4.92857 21H19.0714C20.1366 21 21 20.1366 21 19.0714V8.29883C21 7.78734 20.7968 7.2968 20.4351 6.93513Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                     </svg>
+                     Save Session
+                  </a>
+               </div>
+            </div>
+         </main>
+      </div>
+      <!-- Add New Exercise Data -->
+      <div class="modal fade large-modal" id="addexercise" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Exercise</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                  </button>
+               </div>
+               <div class="modal-body pt-4">
+                  <form>
+                     <div class="form-row">
+                        <div class="form-group">
+                           <label for="name">Exercise Name<span>*</span></label>
+                           <input type="text" class="form-control" id="name" placeholder="Enter Exercise Name"
+                              required>
+                        </div>
+                        <div class="form-group">
+                           <label>Default Quantity<span>*</span></label>
+                           <select class="form-control selectdrop-qefault">
+                              <option value="">Select</option>
+                              <option value="">Reps</option>
+                              <option value="">Distance</option>
+                              <option value="">Time</option>
+                              <option value="">Cals</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label for="name">RM ?<span>*</span></label>
+                           <select class="form-control selectdrop-qefault">
+                              <option value="">Select</option>
+                              <option value="">Yes</option>
+                              <option value="">No</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label>Video Link<span>*</span></label>
+                        <input type="url" class="form-control" placeholder="https://www.youtube/">
+                     </div>
+                     <div class="form-group">
+                        <label>Tags</label>
+                        <div class="form-row">
+                           <select class="form-control selectdrop-qefault">
+                              <option value="">Select</option>
+                              <option value="">Push</option>
+                              <option value="">Pull</option>
+                              <option value="">Legs</option>
+                              <option value="">Lower</option>
+                           </select>
+                           <select class="form-control selectdrop-qefault">
+                              <option value=""></option>
+                              <option value="">Push</option>
+                              <option value="">Pull</option>
+                              <option value="">Legs</option>
+                              <option value="">Lower</option>
+                           </select>
+                           <div class="add-delete-listing  d-flex m-0 my-1 gap-2">
+                              <button class="add-data box-listing-dt">
+                              <i class="fa fa-minus" aria-hidden="true"></i>
+                              </button>
+                              <button class="add-data box-listing-dt">
+                              <i class="fa fa-plus" aria-hidden="true"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="address">Notes</label>
+                        <textarea class="form-control" id="address" rows="3" placeholder="Enter Your Notes Here"
+                           required></textarea>
+                     </div>
+                  </form>
+               </div>
+               <div class="modal-footer border-0">
+                  <button type="button" class="btn btn-primary">Save</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="modal fade large-modal" id="addtitlemodal" tabindex="-1" aria-labelledby="addtitleModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="addtitleModalLabel">Add New Section Title</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">×</span>
+             </button>
+             </div>
+             <div class="modal-body pt-4">
+                 <form>
+                     <div class="form-row">
+                         <div class="form-group">
+                             <label for="name">Section Title<span>*</span></label>
+                             <input type="text" class="form-control" id="name" placeholder="Enter Your Title" required>
+                         </div>
+                         <div class="form-group">
+                             <label>Section Color<span>*</span></label>
+                             <select class="form-control selectdrop-qefault">
+                                 <option value="">Select</option>
+                                 <option value="">Orange</option>
+                                 <option value="">Yellow</option>
+                                 <option value="">Blue</option>
+                                 <option value="">Coral</option>
+                                 <option value="">LEO Red</option>
+                                 <option value="">Green</option>
+                                 <option value="">Purple</option>
+                                 <option value="">Pink</option>
+                                 <option value="">Dark Blue</option>
+                                 <option value="">Lime</option>
+                             </select>
+                         </div>
+                         <div class="form-group">
+                             <label for="name">Section Image<span>*</span></label>
+                             <select class="form-control selectdrop-qefault">
+                                 <option value="">Select</option>
+                                 <option value="">Acro Yoga Pose</option>
+                                 <option value="">Athletics Running</option>
+                                 <option value="">Award Medal</option>
+                                 <option value="">Award Medal Shine</option>
+                                 <option value="">Brain</option>
+                                 <option value="">Diwali</option>
+                                 <option value="">Fitness Biceps</option>
+                                 <option value="">Fitness Weightlift</option>
+                                 <option value="">Group Running</option>
+                             </select>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+             <div class="modal-footer border-0">
+             <button type="button" class="btn btn-primary">Save</button>
+             </div>
+         </div>
+         </div>
+     </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../main.js"></script>
+   </body>
+</html>

@@ -1,0 +1,140 @@
+.calendar-data-wrapper {
+    width: 100%;
+}
+
+.workout-title h2 {
+    padding: 0.7rem 1rem 0.7rem;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    max-width: 100%;
+    color: var(--white);
+    line-height: initial;
+    text-align: center;
+    background-color: var(--primary);
+    border-radius: 4px;
+}
+
+.previous-data h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.previous-data ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.previous-data ul li {
+    display: inline-flex;
+    gap: 10px;
+    word-break: break-all;
+}
+
+.calendar-data-wrapper ul li {
+    font-size: 14px;
+    color: var(--black);
+}
+
+.previous-data ul li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    background-color: var(--white);
+    border: 1px solid #b1b1b1;
+    border-radius: 4px;
+}
+
+.previous-data ul li div {
+    font-size: 12px;
+    font-weight: 500;
+    width: 70%;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.previous-data ul li ul{
+    margin-top: 5px;
+}
+
+.previous-data ul li ul li {
+    font-size: 12px;
+    width: 100%;
+    padding-left: 10px;
+    position: relative;
+}
+
+.previous-data ul li ul li::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+.previous-data ul.liking-row li span {
+    position: relative;
+}
+
+.previous-data ul.liking-row li span::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 13px;
+    height: 30px;
+    width: 1px;
+    background: var(--secondary);
+}
+
+.previous-data ul.liking-row li:last-child span::after {
+    display: none;
+}
+
+.previous-data{
+    display: none;
+}
+
+.previewopen .previous-data{
+    display: block;
+}
+
+.previewopen #hidesidebarmenu {
+    display: none;
+}
+
+.collapsedsidebar .previous-data ul li div{
+    display: none;
+}
+
+.collapsedsidebar .previous-data .workout-title h2, 
+.collapsedsidebar .previous-data h3 {
+    font-size: 10px;
+}
+
+.collapsedsidebar .workout-title h2{
+    padding: 0.7rem .5rem 0.7rem;
+}
+
+.previewopen #previewbtn{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.previewopen #previewbtn img{
+    filter: invert(1);
+}

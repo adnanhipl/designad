@@ -1,0 +1,196 @@
+.admintitle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admintitle img {
+  filter: invert(1);
+}
+
+.mainhead-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d3d3d36e;
+}
+
+.dashboardcontent{
+    background-color: #fbfbfb;
+}
+
+.gridbox-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 15px 0 0;
+}
+
+.griditem {
+  flex-basis: 290px;
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 10px;
+  background-color: var(--light-gray);
+  position: relative;
+}
+
+.yellowlight {
+  background-color: #fff5e0;
+}
+
+.redlight {
+  background-color: #fceae4;
+}
+
+.griditem .icon {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.yellowlight .icon {
+  background-color: #ffe5b1;
+}
+
+.redlight .icon {
+  background-color: #f7c7b7;
+}
+
+.griditem .icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.yellowlight .icon svg path {
+  stroke: #ff9400;
+}
+
+.yellowlight .count-text {
+  color: #ff9400;
+}
+
+.yellowlight .fillicon svg path{
+  fill: #ff9400;
+}
+
+.redlight .icon svg path {
+  stroke: #df2000;
+}
+
+.redlight .count-text {
+  color: #df2000;
+}
+
+.redlight .fillicon svg path{
+  fill: #df2000;
+}
+
+.darklight{
+  background-color: #8a8a8a2b;
+}
+
+.darklight .icon {
+  background-color: #8a8a8a61;
+}
+
+.purplelight {
+  background-color: #efe6f6;
+}
+
+.purplelight .icon {
+  background-color: #d7bfe9;
+}
+
+.purplelight .count-text {
+  color: #6e15b1;
+}
+
+.purplelight svg path,
+.purplelight svg rect{
+  stroke: #6e15b1;
+}
+
+.purplelight .fillicon svg path{
+  fill: #6e15b1;
+}
+
+.greenlight{
+  background-color: #e0f8ea;
+}
+
+.greenlight .icon {
+  background-color: #b3edcb;
+}
+
+.greenlight .count-text {
+  color: #0cc355;
+}
+
+.greenlight  svg path{
+  stroke: #0cc355;
+}
+
+.greenlight .fillicon svg path{
+  fill: #0cc355;
+}
+
+.count-text {
+  position: absolute;
+  right: 15px;
+  font-weight:600;
+  font-size: 18px;
+}
+
+.griditem .title p {
+  margin: 0;
+  color: gray;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .gridbox-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .griditem{
+    flex-basis: 240px;
+  }
+}
+
+@media (max-width: 767px) {
+  .admintitle {
+    font-size: 18px;
+  }
+
+  .mainhead-wrap {
+    padding-bottom: 10px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .griditem {
+    flex-basis: 100%;
+  }
+
+  .form-row {
+    gap: 0;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+
+  .gridbox-wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

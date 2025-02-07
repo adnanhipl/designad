@@ -1,0 +1,326 @@
+.breadcrumb .breadcrumb-item a img {
+    width: 18px;
+    transform: rotate(90deg);
+    filter: invert(0.6);
+    margin-right: 5px;
+    transition: all 0.3s ease-in;
+}
+
+.breadcrumb .breadcrumb-item a {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--secondary);
+    transition: all 0.3s ease-in;
+}
+
+.breadcrumb .breadcrumb-item a:hover{
+    color: var(--black);
+}
+
+.breadcrumb .breadcrumb-item a:hover img{
+    filter: invert(0);
+}
+
+.breadcrumb .breadcrumb-item {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.breadcrumb {
+    margin: 0;
+}
+
+.nav-pills .nav-link {
+    background: var(--white);
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    padding: 8px 12px;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+}
+
+.nav-pills .nav-item {
+    margin: 0 5px;
+    padding: 0;
+    flex: auto;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.nav-pills .nav-link:hover, 
+.nav-pills .nav-link.active {
+    background: #9b0004;
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.form-block {
+    background: transparent;
+    padding: 15px 20px 20px;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.program-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.program-time p {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+}
+
+.notes_inner .accordion-header {
+    background-color: #767676;
+    position: relative;
+}
+
+.accordion-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.notes_inner .accordion-header .edit_notes {
+    left: 12px;
+    top: 12px;
+}
+
+.edit_notes {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    z-index: 9;
+    color: #9d0007;
+}
+
+.accordion-header{
+    position: relative;
+}
+
+.notes_inner .accordion-header h5 {
+    justify-content: flex-start;
+    position: relative;
+    padding-left: 25px;
+}
+
+
+.notes_inner .btn-link{
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    color: var(--white);
+    white-space: inherit;
+}
+
+.notes_inner .accordion-header h5 {
+    justify-content: flex-start;
+    position: relative;
+    padding-left: 25px;
+}
+
+.notes_inner .accordion-header .edit_notes svg path {
+    fill: var(--white);
+    transition: all .3s ease-in-out;
+}
+
+.notes_inner .accordion-header .edit_notes:hover svg path{
+    fill: #9b0004;
+}
+
+
+.notes_inner .accordion-header .edit_notes{
+    left: 12px;
+    top: 12px;
+}
+
+.notes_inner .card-body {
+    padding: 1rem;
+}
+
+.notes_inner .card-body .notes_date{
+    font-size: 14px;
+    color: #9b0004;
+    margin: 0 0 5px;
+}
+
+.notes_inner .card-body .sub_text{
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 2px;
+    line-height: 24px;
+}
+
+.notes_inner .accordion-header{
+    background-color: #767676;
+}
+
+.notes_inner .card {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.notes_inner .btn-link .notes_date {
+    font-size: 12px;
+    color: #dddddd;
+    margin: 0;
+    font-weight: 200;
+}
+
+.notes_inner .accordion-header button{
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='21' viewBox='0 0 40 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M39.1693 0.845042C38.9037 0.577277 38.5877 0.364745 38.2396 0.219708C37.8915 0.0746716 37.518 0 37.1409 0C36.7638 0 36.3904 0.0746716 36.0422 0.219708C35.6941 0.364745 35.3782 0.577277 35.1126 0.845042L22.0283 13.9293C21.7628 14.197 21.4468 14.4096 21.0987 14.5546C20.7505 14.6996 20.3771 14.7743 20 14.7743C19.6229 14.7743 19.2495 14.6996 18.9013 14.5546C18.5532 14.4096 18.2372 14.197 17.9717 13.9293L4.88743 0.845042C4.62185 0.577277 4.30588 0.364745 3.95775 0.219708C3.60962 0.0746716 3.23622 0 2.85908 0C2.48195 0 2.10855 0.0746716 1.76042 0.219708C1.41229 0.364745 1.09632 0.577277 0.830742 0.845042C0.298656 1.3803 0 2.10437 0 2.8591C0 3.61383 0.298656 4.3379 0.830742 4.87316L13.9435 17.986C15.5505 19.5909 17.7288 20.4924 20 20.4924C22.2712 20.4924 24.4495 19.5909 26.0565 17.986L39.1693 4.87316C39.7013 4.3379 40 3.61383 40 2.8591C40 2.10437 39.7013 1.3803 39.1693 0.845042Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 99% center;
+    background-size: 17px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.notes_inner .accordion-header button[aria-expanded="true"]{
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='21' viewBox='0 0 40 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.830748 19.6474C1.09633 19.9152 1.41229 20.1277 1.76042 20.2727C2.10855 20.4178 2.48195 20.4924 2.85909 20.4924C3.23622 20.4924 3.60962 20.4178 3.95775 20.2727C4.30588 20.1277 4.62184 19.9152 4.88742 19.6474L17.9717 6.56316C18.2372 6.29539 18.5532 6.08286 18.9013 5.93783C19.2495 5.79279 19.6229 5.71812 20 5.71812C20.3771 5.71812 20.7505 5.79279 21.0987 5.93783C21.4468 6.08286 21.7628 6.29539 22.0283 6.56316L35.1126 19.6474C35.3782 19.9152 35.6941 20.1277 36.0423 20.2727C36.3904 20.4178 36.7638 20.4924 37.1409 20.4924C37.5181 20.4924 37.8915 20.4178 38.2396 20.2727C38.5877 20.1277 38.9037 19.9152 39.1693 19.6474C39.7013 19.1121 40 18.3881 40 17.6333C40 16.8786 39.7013 16.1545 39.1693 15.6193L26.0565 2.50647C24.4495 0.901508 22.2712 1.39544e-05 20 1.39544e-05C17.7288 1.39544e-05 15.5505 0.901508 13.9435 2.50647L0.830748 15.6193C0.298663 16.1545 1.05834e-06 16.8786 1.05834e-06 17.6333C1.05834e-06 18.3881 0.298663 19.1121 0.830748 19.6474Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+.notes_inner .accordion-header button::after{
+    display: none;
+}
+
+.edit_notes svg {
+    width: 24px;
+}
+
+.notes_inner .btn-link {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    color: var(--white);
+    white-space: inherit;
+}
+
+.accordion-button {
+    padding-left: 45px;
+    background-color: transparent !important;
+    border: none !important;
+    color: var(--white) !important;
+    box-shadow: none !important;
+}
+
+ .notes_date {
+    display: block;
+    font-size: 12px;
+    color: #dddddd;
+    margin: 0;
+    font-weight: 200;
+}
+
+.accordion-item {
+    margin-bottom: 1.5rem;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.addnew_session {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 8px 15px;
+    font-size: 14px !important;
+    gap: 5px !important;
+}
+
+.addnew_session:hover{
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.nav-pills {
+    row-gap: 10px;
+}
+
+.pagination-wrapper {
+    width: fit-content;
+    margin: 2rem auto 0;
+}
+
+.active>.page-link, .page-link.active{
+    background-color: var(--primary);
+    color: var(--white) !important;
+}
+
+.page-item .page-link{
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 50px !important;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: none;
+    color: var(--secondary);
+}
+
+.page-item .page-link:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.nav-pills {
+    position: relative;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+
+@media(max-width:991px){
+    .program-time {
+        flex-direction: column;
+    }
+
+    .program-time p{
+        font-size: 13px;
+        margin-bottom: 7px;
+    }
+
+    .nav-pills {
+        padding-bottom: 10px;
+    }
+}
+
+@media(max-width:767px){
+    .form-block{
+        padding: 15px 0 20px;
+    }
+
+    .program-time{
+        flex-wrap: wrap;
+    }
+
+    .notes_inner .accordion-header button{
+        font-size: 13px;
+        row-gap: 4px;
+        background-position: 96% center;
+        background-size: 16px;
+    }
+
+    .page-item .page-link{
+        min-width: 30px;
+        min-height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+    }
+
+    .addnew_session{
+        padding: 5px 10px;
+        font-size: 13px !important;
+    }
+}

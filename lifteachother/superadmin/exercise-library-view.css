@@ -1,0 +1,38 @@
+.set-card .set-block {
+    padding: 10px;
+}
+
+.video-main-box .set-card .sub-title h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 1rem;
+    margin-top: 8px;
+}
+
+.video-main-box .set-card .sub-title h5 strong {
+    color: var(--primary);
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.video-title h3{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.video-main-box .set-card .set-block .video-description p {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.set-card .note-msg {
+    background: #ffecec;
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    margin-top: 10px;
+}

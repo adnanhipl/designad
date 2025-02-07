@@ -1,0 +1,7 @@
+.password-add-client i{
+    color: var(--secondary);
+}
+
+.btn-right button{
+    margin-left: auto;
+}

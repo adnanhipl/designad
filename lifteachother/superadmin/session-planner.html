@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../sidebar.css">
+    <link rel="stylesheet" href="session-planner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+    <div class="sidebarcollapse-wrapper">
+        <aside>
+           <div>
+              <div class="mobile-adminhead d-md-none">
+                 <div class="adminlogo"><a href="javascript:void(0)" data-discover="true"><img src="../images/darklogo.svg" alt="Logo" class="admin-logo-img"></a></div>
+                 <div class="menu-icon">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+                    </svg>
+                 </div>
+              </div>
+              <div class="sidebar ">
+                 <div class="sidebarinner">
+                    <div class="adminlogo">
+                       <a href="javascript:void(0)" class="admin-logo-link" data-discover="true"><img src="../images/darklogo.svg" alt="Logo" class="admin-logo-img"></a>
+                       <div class="sidebarcollapse">
+                            <img src="../images/sidebarcoll.svg" alt="">
+                       </div>
+                    </div>
+                    <div class="flex-column nav">
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="dashboard.html" data-discover="true" title="Dashboard">
+                                <img src="../images/dashboard.svg" alt="">
+                                Dashboard
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="organization.html" data-discover="true" title="Organization">
+                                <img src="../images/organization.svg" alt="">
+                                Organization
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="package.html" data-discover="true" title="Package">
+                                <img src="../images/package.svg" alt="">
+                                Package
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="exercise-library.html" data-discover="true" title="Exercise Library">
+                                <img src="../images/exercise-library.svg" alt="">
+                                Exercise Library
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="sectiontitile.html" data-discover="true" title="Section Title">
+                                <img src="../images/section-tilte.svg" alt="">
+                                Section Title
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="sectionlibrary.html" data-discover="true" title="Section Library">
+                                <img src="../images/section-library.svg" alt="">
+                                Section Library
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="sessionlibrary.html" data-discover="true" title="Session Library">
+                                <img src="../images/session-library.svg" alt="">
+                                Session Library
+                            </a>
+                        </div>
+                        <div class="nav-item sessionplanner-item">
+                            <a class="sidebar-item nav-link active" href="session-planner.html" data-discover="true" title="Session Planner">
+                                <img src="../images/session-planner.svg" alt="">
+                                Session Planner
+                            </a>
+                            <div class="session-listing-toggle" id="sessionlisting" title="Session List">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </div>
+
+                            <div class="sessionplanner-collapes">
+                                <div class="expandinner-date-box">
+                                    <div class="event-box">
+                                        <div class="innercollapesbtn" data-bs-toggle="collapse" data-bs-target="#sessionlist" aria-expanded="false" aria-controls="sessionlist">
+                                            <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5515 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7744 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7744 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5515 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0568 10.2809 30.0568 9.896 29.8298 9.64513Z" fill="white"/>
+                                                <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#B24040"/>
+                                                <g clip-path="url(#clip0_3026_2638)">
+                                                <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#CC8080"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_3026_2638">
+                                                <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398224)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>                                        
+                                        </div>
+                                        <span>Session List</span>
+                                    </div>
+                                    <div class="sm-content-inner collapse" id="sessionlist">
+                                        <div class="inner-data-wrap">
+                                           <h3> Session 01 </h3>
+                                           <h3> Session 02 </h3>
+                                           <h3> Session 03 </h3>
+                                           <h3> Session 04 </h3>
+                                           <h3> Session 05 </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="expandinner-date-box">
+                                    <div class="event-box">
+                                        <div class="innercollapesbtn" data-bs-toggle="collapse" data-bs-target="#sectionlist" aria-expanded="false" aria-controls="sectionlist">
+                                            <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5515 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7744 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7744 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5515 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0568 10.2809 30.0568 9.896 29.8298 9.64513Z" fill="white"/>
+                                                <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#B24040"/>
+                                                <g clip-path="url(#clip0_3026_2638)">
+                                                <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#CC8080"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_3026_2638">
+                                                <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398224)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>                                        
+                                        </div>
+                                        <span>Section List</span>
+                                    </div>
+                                    <div class="sm-content-inner collapse" id="sectionlist">
+                                        <div class="inner-data-wrap">
+                                            <h3> Section 01 </h3>
+                                            <h3> Section 02 </h3>
+                                            <h3> Section 03 </h3>
+                                            <h3> Section 04 </h3>
+                                            <h3> Section 05 </h3>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="expandinner-date-box">
+                                    <div class="event-box">
+                                        <div class="innercollapesbtn" data-bs-toggle="collapse" data-bs-target="#programlist" aria-expanded="false" aria-controls="programlist">
+                                            <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5515 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7744 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7744 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5515 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0568 10.2809 30.0568 9.896 29.8298 9.64513Z" fill="white"/>
+                                                <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#B24040"/>
+                                                <g clip-path="url(#clip0_3026_2638)">
+                                                <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#CC8080"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_3026_2638">
+                                                <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398224)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>                                        
+                                        </div>
+                                        <span>Program List</span>
+                                    </div>
+                                    <div class="sm-content-inner collapse" id="programlist">
+                                        <div class="inner-data-wrap">
+                                            <h3> Program 01 </h3>
+                                            <h3> Program 02 </h3>
+                                            <h3> Program 03 </h3>
+                                            <h3> Program 04 </h3>
+                                            <h3> Program 05 </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="protocol.html" data-discover="true" title="Protocol">
+                                <img src="../images/protocol.svg" alt="">
+                                Protocol
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="profile.html" data-discover="true" title="Profile">
+                                <img src="../images/user-profile.svg" alt="">
+                                Profile
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="client.html" data-discover="true" title="Client">
+                                <img src="../images/client.svg" alt="">
+                                Client
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="coach.html" data-discover="true" title="Coach">
+                                <img src="../images/coach.svg" alt="">
+                                Coach
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="sidebar-item nav-link" href="../login/login.html" data-discover="true" title="Logout">
+                                <img src="../images/logout.svg" alt="">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar-bottom">
+                       <p class="sidebar-subtext"><strong>LIFT EACH OTHER © 2020 - 2025</strong><br>91 High Street, Orpington, BR6 0LF</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </aside>
+        <main class="admin-wrap">
+           <div class="mainhead-wrap">
+                <div class="icon headitem">
+                    <img src="../images/session-planner.svg" alt="">
+                </div>
+                <div class="headtitle headitem">
+                    <h2>Session Planner</h2>
+                </div>
+                <div class="headitem"></div>
+           </div>
+           <div class="maincontent pb-0">
+                <div class="row mt-3">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="name">Select Client</label>
+                            <select class="form-control selectdrop">
+                                <option>John Doe</option>
+                                <option>Jane Smith</option>
+                                <option>Michael Johnson</option>
+                                <option>Emily Davis</option>
+                                <option>David Wilson</option>
+                            </select>                              
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group mb-0">
+                            <div class="form-group">
+                                <label for="name">Add Custom Programme</label>
+                                <input type="text" class="form-control" id="name" placeholder="Programme 1" required>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+           </div>
+
+           <div class="calendar-box">
+                <!-- Calendar Header -->
+                <div class="calendar-header d-flex justify-content-between align-items-center">
+                    <button class="yearchange-btn" title="Prev Year">
+                        <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.170223 10.266L6.14326 16.9027C6.27068 17.0434 6.44855 17.123 6.63703 17.123H10.6191C10.8805 17.123 11.1181 16.9691 11.2256 16.7302C11.3318 16.4899 11.288 16.2098 11.1128 16.016L5.53932 9.82267L11.1128 3.63062C11.288 3.4355 11.3332 3.15544 11.2256 2.91651C11.1181 2.67627 10.8805 2.52229 10.6191 2.52229H6.63703C6.44855 2.52229 6.27068 2.60326 6.14326 2.7413L0.170223 9.37801C-0.0567522 9.63021 -0.0567522 10.0151 0.170223 10.266Z" fill="#B24040"/>
+                            <path d="M18.8868 10.3988L24.8598 17.0355C24.9872 17.1762 25.1651 17.2559 25.3536 17.2559H29.3356C29.5971 17.2559 29.8347 17.1019 29.9422 16.863C30.0484 16.6227 30.0046 16.3426 29.8294 16.1489L24.2558 9.95548L29.8294 3.76344C30.0046 3.56832 30.0497 3.28825 29.9422 3.04933C29.8347 2.80908 29.5971 2.65511 29.3356 2.65511H25.3536C25.1651 2.65511 24.9872 2.73607 24.8598 2.87412L18.8868 9.51082C18.6598 9.76302 18.6598 10.1479 18.8868 10.3988Z" fill="#E5BFBF"/>
+                            <g clip-path="url(#clip0_3029_2668)">
+                            <path d="M9.86081 10.3988L15.8338 17.0355C15.9613 17.1762 16.1391 17.2559 16.3276 17.2559H20.3096C20.5711 17.2559 20.8087 17.1019 20.9162 16.863C21.0224 16.6227 20.9786 16.3426 20.8034 16.1489L15.2299 9.95548L20.8034 3.76344C20.9786 3.56832 21.0237 3.28825 20.9162 3.04933C20.8087 2.80908 20.5711 2.65511 20.3096 2.65511H16.3276C16.1391 2.65511 15.9613 2.73607 15.8338 2.87412L9.86081 9.51082C9.63383 9.76302 9.63383 10.1479 9.86081 10.3988Z" fill="#CC8080"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_3029_2668">
+                            <rect width="19.9112" height="19.9112" fill="white" transform="matrix(-1 0 0 -1 29.6018 19.9111)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>                                                        
+                    </button>
+
+                    <button class="monthchange-btn" title="Prev Month">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.19632 10.3988L15.1694 17.0355C15.2968 17.1762 15.4746 17.2559 15.6631 17.2559H19.6452C19.9066 17.2559 20.1442 17.1019 20.2517 16.863C20.3579 16.6227 20.3141 16.3426 20.1389 16.1489L14.5654 9.95548L20.1389 3.76344C20.3141 3.56832 20.3593 3.28825 20.2517 3.04933C20.1442 2.80908 19.9066 2.65511 19.6452 2.65511H15.6631C15.4746 2.65511 15.2968 2.73607 15.1694 2.87412L9.19632 9.51082C8.96935 9.76302 8.96935 10.1479 9.19632 10.3988Z" fill="#B24040"/>
+                            <g clip-path="url(#clip0_3029_2688)">
+                            <path d="M0.170382 10.3988L6.14342 17.0355C6.27084 17.1762 6.44871 17.2559 6.63719 17.2559H10.6192C10.8807 17.2559 11.1183 17.1019 11.2258 16.863C11.332 16.6227 11.2882 16.3426 11.113 16.1489L5.53948 9.95548L11.113 3.76344C11.2882 3.56832 11.3333 3.28825 11.2258 3.04933C11.1183 2.80908 10.8807 2.65511 10.6192 2.65511H6.63719C6.44871 2.65511 6.27084 2.73607 6.14342 2.87412L0.170382 9.51082C-0.0565934 9.76302 -0.0565934 10.1479 0.170382 10.3988Z" fill="#B24040"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_3029_2688">
+                            <rect width="19.9112" height="19.9112" fill="white" transform="matrix(-1 0 0 -1 19.9113 19.9111)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>                            
+                    </button>
+                        <h2 class="m-0 d-flex gap-2"><div class="fc-month">January</div> <span class="fc-year">2025</span></h2>
+                    <button class="monthchange-btn" title="Next Month">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#B24040"/>
+                            <g clip-path="url(#clip0_3029_2678)">
+                            <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#B24040"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_3029_2678">
+                            <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398224)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>                                                      
+                    </button>
+
+                    <button class="yearchange-btn" title="Next Year">
+                        <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5515 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7743 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7743 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5515 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0568 10.2809 30.0568 9.896 29.8298 9.64513Z" fill="#B24040"/>
+                            <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#E5BFBF"/>
+                            <g clip-path="url(#clip0_3030_2705)">
+                            <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#CC8080"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_3030_2705">
+                            <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398222)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>                           
+                    </button>
+                </div>
+        
+                <!-- Calendar Controls -->
+                <div class="calendarcontrols d-flex justify-content-between">
+                    <div class="groupbtn d-flex">
+                        <button class="calendar-btn">Save Programme</button>
+                        <button class="calendar-btn">Submit</button>
+                    </div>
+
+                    <div class="groupbtn centerbtn d-flex">
+                        <button class="calendar-btn">Today</button>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button class="calendar-btn">Sort By Day</button>
+                        <button class="calendar-btn">Expand</button>
+                        <div class="fc-group-btn">
+                            <button class="calendar-btn active">Month</button>
+                            <button class="calendar-btn">Week</button>
+                            <button class="calendar-btn">Day</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="main-calendar-box">
+                    <!-- Calendar Grid -->
+                    <div class="row">
+                        <!-- Day Names -->
+                        <div class="col text-center fw-bold fc-day-name">Mon</div>
+                        <div class="col text-center fw-bold fc-day-name">Tue</div>
+                        <div class="col text-center fw-bold fc-day-name">Wed</div>
+                        <div class="col text-center fw-bold fc-day-name">Thu</div>
+                        <div class="col text-center fw-bold fc-day-name">Fri</div>
+                        <div class="col text-center fw-bold fc-day-name">Sat</div>
+                        <div class="col text-center fw-bold fc-day-name">Sun</div>
+                    </div>
+
+                    <div class="girdsevenbox-wrap">
+                        <!-- Calendar Days -->
+                        <div class="girdsevenbox-item day-cell fc-day-past">
+                            <span class="day-number">30</span>
+                        </div>
+
+                        <div class="girdsevenbox-item day-cell fc-day-past">
+                            <span class="day-number">31</span>
+                        </div>
+
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">1</span>
+                            <div class="expandinner-date-box">
+                                <div class="event-box">
+                                    <div class="innercollapesbtn" data-bs-toggle="collapse" data-bs-target="#programcontent4" aria-expanded="false" aria-controls="programcontent4">
+                                        <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5515 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7744 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7744 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5515 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0568 10.2809 30.0568 9.896 29.8298 9.64513Z" fill="white"/>
+                                            <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#B24040"/>
+                                            <g clip-path="url(#clip0_3026_2638)">
+                                            <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#CC8080"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_3026_2638">
+                                            <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398224)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                        
+                                    </div>
+                                    <span>Session List</span>
+                                </div>
+                                <div class="sm-content-inner collapse" id="programcontent4">
+                                    <div class="inner-data-wrap">
+                                        <h3> Session 01 </h3>
+                                        <h3> Session 02 </h3>
+                                        <h3> Session 03 </h3>
+                                        <h3> Session 04 </h3>
+                                        <h3> Session 05 </h3>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="expandinner-date-box">
+                                <div class="event-box">
+                                    <div class="innercollapesbtn" data-bs-toggle="collapse" data-bs-target="#programcontent5" aria-expanded="false" aria-controls="programcontent5">
+                                        <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5515 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7744 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7744 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5515 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0568 10.2809 30.0568 9.896 29.8298 9.64513Z" fill="white"/>
+                                            <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#B24040"/>
+                                            <g clip-path="url(#clip0_3026_2638)">
+                                            <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#CC8080"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_3026_2638">
+                                            <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398224)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                        
+                                    </div>
+                                    <span>Section List</span>
+                                </div>
+                                <div class="sm-content-inner collapse" id="programcontent5">
+                                    <div class="inner-data-wrap">
+                                        <h3> Section 01 </h3>
+                                        <h3> Section 02 </h3>
+                                        <h3> Section 03 </h3>
+                                        <h3> Section 04 </h3>
+                                        <h3> Section 05 </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expandinner-date-box">
+                                <div class="event-box">
+                                    <div class="innercollapesbtn" data-bs-toggle="collapse" data-bs-target="#programcontent6" aria-expanded="false" aria-controls="programcontent6">
+                                        <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5515 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7744 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7744 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5515 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0568 10.2809 30.0568 9.896 29.8298 9.64513Z" fill="white"/>
+                                            <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#B24040"/>
+                                            <g clip-path="url(#clip0_3026_2638)">
+                                            <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#CC8080"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_3026_2638">
+                                            <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398224)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                        
+                                    </div>
+                                    <span>Program List</span>
+                                </div>
+                                <div class="sm-content-inner collapse" id="programcontent6">
+                                    <div class="inner-data-wrap">
+                                        <h3> Program 01 </h3>
+                                        <h3> Program 02 </h3>
+                                        <h3> Program 03 </h3>
+                                        <h3> Program 04 </h3>
+                                        <h3> Program 05 </h3>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="calendar-drop-wrap">
+                                <div class="dropdown">
+                                   <button class="dropdown-toggle" type="button" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.0024 14.7889H5.62846C5.07726 14.7889 4.63051 14.3421 4.63051 13.7909C4.63051 13.2397 5.07726 12.793 5.62846 12.793H19.002C19.5533 12.793 20 13.2397 20 13.7909C20 14.3421 19.5536 14.7889 19.0024 14.7889Z" fill="black"/>
+                                            <path d="M19.0024 8.52521H5.62846C5.07726 8.52521 4.63051 8.07845 4.63051 7.52725C4.63051 6.97605 5.07726 6.5293 5.62846 6.5293H19.002C19.5533 6.5293 20 6.97605 20 7.52725C20.0003 8.07845 19.5536 8.52521 19.0024 8.52521Z" fill="black"/>
+                                            <path d="M19.0024 2.26056H5.62846C5.07726 2.26056 4.63051 1.81381 4.63051 1.2626C4.63051 0.711399 5.07726 0.264648 5.62846 0.264648H19.002C19.5533 0.264648 20 0.711399 20 1.2626C20 1.81381 19.5536 2.26056 19.0024 2.26056Z" fill="black"/>
+                                            <path d="M1.34025 2.6805C2.08045 2.6805 2.6805 2.08045 2.6805 1.34025C2.6805 0.600052 2.08045 0 1.34025 0C0.600051 0 0 0.600052 0 1.34025C0 2.08045 0.600051 2.6805 1.34025 2.6805Z" fill="black"/>
+                                            <path d="M1.34025 8.86703C2.08045 8.86703 2.6805 8.26698 2.6805 7.52678C2.6805 6.78657 2.08045 6.18652 1.34025 6.18652C0.600051 6.18652 0 6.78657 0 7.52678C0 8.26698 0.600051 8.86703 1.34025 8.86703Z" fill="black"/>
+                                            <path d="M1.34025 15.0545C2.08045 15.0545 2.6805 14.4545 2.6805 13.7143C2.6805 12.9741 2.08045 12.374 1.34025 12.374C0.600051 12.374 0 12.9741 0 13.7143C0 14.4545 0.600051 15.0545 1.34025 15.0545Z" fill="black"/>
+                                        </svg>                                        
+                                   </button>
+                                   <div class="dropdown-menu dropdown-menu-bottom dropdown-menu-end premade_wrapper_drop">
+                                      <li><a class="dropdown-item" href="#">Edit</a> </li>
+                                      <li><a class="dropdown-item" href="#">Copy</a></li>
+                                      <li><a class="dropdown-item" href="#">Paste</a></li>
+                                      <li class="premade_wrapper">
+                                         <a class="dropdown-item premadesessionbox_wrap" id="premadesessionbox" href="javascript:void(0);"> + Import Session »                                      </a>
+                                         <ul class="dropdown-menu mega-dropdown-menu dropdown-submenu premadesessionbox_dropdown">
+                                            <li>
+                                               <label>Select Pre - Made title </label>
+                                               <select class="form-control selectdrop">
+                                                  <option data-select2-id="select2-data-30-iuit">Session title-01</option>
+                                                  <option>Session title-02</option>
+                                                  <option>Session title-03</option>
+                                                  <option>Session title-04</option>
+                                                  <option>Session title-05</option>
+                                               </select>
+                                            </li>
+                                         </ul>
+                                      </li>
+                                      <li><a class="dropdown-item" href="javascript:void(0);">Save as Session</a></li>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">2</span>
+                            <div class="calendar-drop-wrap">
+                                <div class="dropdown">
+                                   <button class="dropdown-toggle" type="button" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.0024 14.7889H5.62846C5.07726 14.7889 4.63051 14.3421 4.63051 13.7909C4.63051 13.2397 5.07726 12.793 5.62846 12.793H19.002C19.5533 12.793 20 13.2397 20 13.7909C20 14.3421 19.5536 14.7889 19.0024 14.7889Z" fill="black"/>
+                                            <path d="M19.0024 8.52521H5.62846C5.07726 8.52521 4.63051 8.07845 4.63051 7.52725C4.63051 6.97605 5.07726 6.5293 5.62846 6.5293H19.002C19.5533 6.5293 20 6.97605 20 7.52725C20.0003 8.07845 19.5536 8.52521 19.0024 8.52521Z" fill="black"/>
+                                            <path d="M19.0024 2.26056H5.62846C5.07726 2.26056 4.63051 1.81381 4.63051 1.2626C4.63051 0.711399 5.07726 0.264648 5.62846 0.264648H19.002C19.5533 0.264648 20 0.711399 20 1.2626C20 1.81381 19.5536 2.26056 19.0024 2.26056Z" fill="black"/>
+                                            <path d="M1.34025 2.6805C2.08045 2.6805 2.6805 2.08045 2.6805 1.34025C2.6805 0.600052 2.08045 0 1.34025 0C0.600051 0 0 0.600052 0 1.34025C0 2.08045 0.600051 2.6805 1.34025 2.6805Z" fill="black"/>
+                                            <path d="M1.34025 8.86703C2.08045 8.86703 2.6805 8.26698 2.6805 7.52678C2.6805 6.78657 2.08045 6.18652 1.34025 6.18652C0.600051 6.18652 0 6.78657 0 7.52678C0 8.26698 0.600051 8.86703 1.34025 8.86703Z" fill="black"/>
+                                            <path d="M1.34025 15.0545C2.08045 15.0545 2.6805 14.4545 2.6805 13.7143C2.6805 12.9741 2.08045 12.374 1.34025 12.374C0.600051 12.374 0 12.9741 0 13.7143C0 14.4545 0.600051 15.0545 1.34025 15.0545Z" fill="black"/>
+                                        </svg>                                        
+                                   </button>
+                                   <div class="dropdown-menu dropdown-menu-bottom dropdown-menu-end premade_wrapper_drop">
+                                      <li><a class="dropdown-item" href="single-session-planner.html">New</a> </li>
+                                      <li><a class="dropdown-item" href="#">Paste</a></li>
+                                      <li class="premade_wrapper">
+                                         <a class="dropdown-item premadesessionbox_wrap" id="premadesessionbox" href="javascript:void(0);"> + Import Session »                                      </a>
+                                         <!-- <ul class="dropdown-menu mega-dropdown-menu dropdown-submenu premadesessionbox_dropdown">
+                                            <li>
+                                               <label>Select Pre - Made title </label>
+                                               <select class="form-control selectdrop">
+                                                  <option data-select2-id="select2-data-30-iuit">Session title-01</option>
+                                                  <option>Session title-02</option>
+                                                  <option>Session title-03</option>
+                                                  <option>Session title-04</option>
+                                                  <option>Session title-05</option>
+                                               </select>
+                                            </li>
+                                         </ul> -->
+                                      </li>
+                                      <li><a class="dropdown-item" href="javascript:void(0);">Save as Session</a></li>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">3</span>
+                            <!-- <div class="expandinner-date-box">
+                                <div class="event-box">
+                                    <div class="innercollapesbtn" data-bs-toggle="collapse" data-bs-target="#programcontent" aria-expanded="false" aria-controls="programcontent">
+                                        <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5515 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7744 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7744 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5515 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0568 10.2809 30.0568 9.896 29.8298 9.64513Z" fill="white"/>
+                                            <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#B24040"/>
+                                            <g clip-path="url(#clip0_3026_2638)">
+                                            <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#CC8080"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_3026_2638">
+                                            <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398224)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                        
+                                    </div>
+                                    <span>S&C</span>
+                                </div>
+                                <div class="sm-content-inner collapse" id="programcontent">
+                                    <div class="inner-data-wrap">
+                                       <h3> Mobility / Core </h3>
+                                       <ul>
+                                          <li>A - 10 Half Kneeling Hip Shift</li>
+                                          <li>B - 45sec Elevated Pigeon</li>
+                                          <li>C - 10 Prone Y Raises</li>
+                                          <li>D - 45sec Plate Halo</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <h3> Warm-Up </h3>
+                                       <ul>
+                                          <li>3 Rounds:</li>
+                                          <li>A1 - 50 Single Unde</li>
+                                          <li>A2 - 12 Back Extensions</li>
+                                          <li>A3 - 12 Goblet Squats</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>1 Rounds:</li>
+                                          <li>B1 - 5 Seated Box Jumps</li>
+                                          <li>B2 - 5 Muscle Cleans</li>
+                                          <li>B2 - 5 Muscle Cleans</li>
+                                          <li>B4 - 5 Power Cleans</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <h3> Main Session </h3>
+                                       <ul>
+                                          <li>A - 5x5 Back Squat @</li>
+                                          <li>130.5kg</li>
+                                          <li>A2 - 12 Back Extensions</li>
+                                          <li>A3 - 12 Goblet Squats</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>1min Amrap</li>
+                                          <li>5 Rounds:</li>
+                                          <li>B - Power Cleans @ 80.5kg</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>10min Amrap</li>
+                                          <li>C1 - 50 Double Unders</li>
+                                          <li>C2 - 10 Push Jerk</li>
+                                          <li>C3 - 10 Toes to Ba</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>Cardio Intervals, 8 Rounds:</li>
+                                          <li>D - 30cal Row</li>
+                                       </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expandinner-date-box">
+                                <div class="event-box">
+                                    <div class="innercollapesbtn" data-bs-toggle="collapse" data-bs-target="#programcontent2" aria-expanded="false" aria-controls="programcontent2">
+                                        <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5515 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7744 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7744 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5515 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0568 10.2809 30.0568 9.896 29.8298 9.64513Z" fill="white"/>
+                                            <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#B24040"/>
+                                            <g clip-path="url(#clip0_3026_2638)">
+                                            <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#CC8080"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_3026_2638">
+                                            <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398224)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                        
+                                    </div>
+                                    <span>S&P</span>
+                                </div>
+                                <div class="sm-content-inner collapse" id="programcontent2">
+                                    <div class="inner-data-wrap">
+                                       <h3> Mobility / Core </h3>
+                                       <ul>
+                                          <li>A - 10 Half Kneeling Hip Shift</li>
+                                          <li>B - 45sec Elevated Pigeon</li>
+                                          <li>C - 10 Prone Y Raises</li>
+                                          <li>D - 45sec Plate Halo</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <h3> Warm-Up </h3>
+                                       <ul>
+                                          <li>3 Rounds:</li>
+                                          <li>A1 - 50 Single Unde</li>
+                                          <li>A2 - 12 Back Extensions</li>
+                                          <li>A3 - 12 Goblet Squats</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>1 Rounds:</li>
+                                          <li>B1 - 5 Seated Box Jumps</li>
+                                          <li>B2 - 5 Muscle Cleans</li>
+                                          <li>B2 - 5 Muscle Cleans</li>
+                                          <li>B4 - 5 Power Cleans</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <h3> Main Session </h3>
+                                       <ul>
+                                          <li>A - 5x5 Back Squat @</li>
+                                          <li>130.5kg</li>
+                                          <li>A2 - 12 Back Extensions</li>
+                                          <li>A3 - 12 Goblet Squats</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>1min Amrap</li>
+                                          <li>5 Rounds:</li>
+                                          <li>B - Power Cleans @ 80.5kg</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>10min Amrap</li>
+                                          <li>C1 - 50 Double Unders</li>
+                                          <li>C2 - 10 Push Jerk</li>
+                                          <li>C3 - 10 Toes to Ba</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>Cardio Intervals, 8 Rounds:</li>
+                                          <li>D - 30cal Row</li>
+                                       </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expandinner-date-box">
+                                <div class="event-box">
+                                    <div class="innercollapesbtn" data-bs-toggle="collapse" data-bs-target="#programcontent3" aria-expanded="false" aria-controls="programcontent3">
+                                        <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M29.8298 9.64513L23.8567 3.00842C23.7293 2.86773 23.5515 2.78809 23.363 2.78809H19.3809C19.1195 2.78809 18.8819 2.94206 18.7744 3.18098C18.6682 3.42123 18.712 3.7013 18.8872 3.89509L24.4607 10.0885L18.8872 16.2805C18.712 16.4756 18.6668 16.7557 18.7744 16.9946C18.8819 17.2349 19.1195 17.3888 19.3809 17.3888H23.363C23.5515 17.3888 23.7293 17.3079 23.8567 17.1698L29.8298 10.5331C30.0568 10.2809 30.0568 9.896 29.8298 9.64513Z" fill="white"/>
+                                            <path d="M11.1132 9.51232L5.14021 2.87561C5.01279 2.73491 4.83492 2.65527 4.64644 2.65527H0.664417C0.402931 2.65527 0.165337 2.80924 0.057822 3.04817C-0.0483653 3.28842 -0.00456303 3.56848 0.170646 3.76228L5.74415 9.95565L0.170646 16.1477C-0.00456303 16.3428 -0.0496926 16.6229 0.057822 16.8618C0.165337 17.1021 0.402931 17.256 0.664417 17.256H4.64644C4.83492 17.256 5.01279 17.1751 5.14021 17.037L11.1132 10.4003C11.3402 10.1481 11.3402 9.76318 11.1132 9.51232Z" fill="#B24040"/>
+                                            <g clip-path="url(#clip0_3026_2638)">
+                                            <path d="M20.1392 9.51232L14.1662 2.87561C14.0387 2.73491 13.8609 2.65527 13.6724 2.65527H9.69036C9.42887 2.65527 9.19128 2.80925 9.08376 3.04817C8.97757 3.28842 9.02138 3.56848 9.19659 3.76228L14.7701 9.95565L9.19659 16.1477C9.02138 16.3428 8.97625 16.6229 9.08376 16.8618C9.19128 17.1021 9.42887 17.256 9.69036 17.256H13.6724C13.8609 17.256 14.0387 17.1751 14.1662 17.037L20.1392 10.4003C20.3662 10.1481 20.3662 9.76319 20.1392 9.51232Z" fill="#CC8080"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_3026_2638">
+                                            <rect width="19.9112" height="19.9112" fill="white" transform="translate(0.398224)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                        
+                                    </div>
+                                    <span>Mobility</span>
+                                </div>
+                                <div class="sm-content-inner collapse" id="programcontent3">
+                                    <div class="inner-data-wrap">
+                                       <h3> Mobility / Core </h3>
+                                       <ul>
+                                          <li>A - 10 Half Kneeling Hip Shift</li>
+                                          <li>B - 45sec Elevated Pigeon</li>
+                                          <li>C - 10 Prone Y Raises</li>
+                                          <li>D - 45sec Plate Halo</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <h3> Warm-Up </h3>
+                                       <ul>
+                                          <li>3 Rounds:</li>
+                                          <li>A1 - 50 Single Unde</li>
+                                          <li>A2 - 12 Back Extensions</li>
+                                          <li>A3 - 12 Goblet Squats</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>1 Rounds:</li>
+                                          <li>B1 - 5 Seated Box Jumps</li>
+                                          <li>B2 - 5 Muscle Cleans</li>
+                                          <li>B2 - 5 Muscle Cleans</li>
+                                          <li>B4 - 5 Power Cleans</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <h3> Main Session </h3>
+                                       <ul>
+                                          <li>A - 5x5 Back Squat @</li>
+                                          <li>130.5kg</li>
+                                          <li>A2 - 12 Back Extensions</li>
+                                          <li>A3 - 12 Goblet Squats</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>1min Amrap</li>
+                                          <li>5 Rounds:</li>
+                                          <li>B - Power Cleans @ 80.5kg</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>10min Amrap</li>
+                                          <li>C1 - 50 Double Unders</li>
+                                          <li>C2 - 10 Push Jerk</li>
+                                          <li>C3 - 10 Toes to Ba</li>
+                                       </ul>
+                                    </div>
+                                    <div class="inner-data-wrap">
+                                       <ul>
+                                          <li>Cardio Intervals, 8 Rounds:</li>
+                                          <li>D - 30cal Row</li>
+                                       </ul>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">4</span>
+                        </div>
+
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">5</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">6</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">7</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">8</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">9</span>
+                        </div>
+
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">10</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">11</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">12</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">13</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">14</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">15</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">16</span>
+                        </div>
+
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">17</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">18</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">19</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">20</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">21</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">22</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">23</span>
+                        </div>
+
+
+                        <div class="girdsevenbox-item day-cell fc-day-today">
+                            <span class="day-number">24</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">25</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">26</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">27</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">28</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">29</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">30</span>
+                        </div>
+
+
+                        <div class="girdsevenbox-item day-cell">
+                            <span class="day-number">31</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell fc-day-future">
+                            <span class="day-number">1</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell fc-day-future">
+                            <span class="day-number">2</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell fc-day-future">
+                            <span class="day-number">3</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell fc-day-future">
+                            <span class="day-number">4</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell fc-day-future">
+                            <span class="day-number">5</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell fc-day-future">
+                            <span class="day-number">6</span>
+                        </div>
+                        
+                        <div class="girdsevenbox-item day-cell fc-day-future">
+                            <span class="day-number">7</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell fc-day-future">
+                            <span class="day-number">8</span>
+                        </div>
+                        <div class="girdsevenbox-item day-cell fc-day-future">
+                            <span class="day-number">9</span>
+                        </div>
+                    </div>
+                    <!-- Additional Weeks -->
+                </div>
+                
+            </div>
+        </main>
+     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>
